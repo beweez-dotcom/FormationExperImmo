@@ -60,3 +60,8 @@ Une ligne par décision : la date, ce qui a été décidé, et pourquoi.
 ## 2026-10-26 — Interface de démonstration (v1)
 
 - Page web « Expertise augmentée » publiée (privée) : chaîne d'agents en deux phases, documents réels de l'essai, arbitrage de l'expert modifiable en direct, S7/S8 et contrôle recalculés dans la page. Pourquoi : montrer aux experts que la décision leur reste, et que chaque modification est vérifiée instantanément. La page dit clairement qu'elle rejoue l'essai (pas d'agents en direct dans le navigateur).
+
+## 2026-10-26 — Script de démonstration
+
+- Script de 20 minutes (+ 10 à 15 min de questions) rédigé dans un document partageable : préparation, déroulé minute par minute sur la page « Expertise augmentée », trois temps forts mot pour mot, réponses aux objections, ce qu'il ne faut pas promettre, conclusion et proposition de pilote. Pourquoi : la démo repose sur trois moments (l'expert décide, le Rédacteur refuse d'écrire, le Contrôleur trouve 3 bloquants) qu'il faut dire sans improviser.
+- Correction en direct proposée : cocher la réserve puis aligner le prix sur le calcul (8 533 €/m², 580 000 €). À valider par Rob'r. Le prix du pilote reste à compléter par Rob'r.
