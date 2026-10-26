@@ -14,7 +14,7 @@ Le squelette du projet est créé : mémoire, 5 agents, 6 skills, dossiers. Agen
 | 1. Cadrage métier : analyser les 3 rapports, établir le plan type et ses variantes | Fait (`sources/analyse-structures.md`) |
 | 2. Compléter les agents et les skills avec le contenu réel | Fait : 5 agents et 6 skills fondés sur le cours, la Charte et les rapports réels |
 | 3. Tester la chaîne sur un cas (amiable, T3 rue Keller) et comparer avec un rapport réel | Trois essais complets le 26/10 ; second essai avec les décisions de Rob'r : sorties dans `cas-tests/amiable-t3-keller/sorties/` |
-| 4. Interface web de démonstration | À faire |
+| 4. Interface web de démonstration | Première version publiée le 26/10 (`app/demo/`, page « Expertise augmentée ») |
 | 5. Script de démo, réponses aux objections, vidéo de secours | À faire |
 | 6. Offre commerciale (pilote avec 2 ou 3 experts) | À faire |
 

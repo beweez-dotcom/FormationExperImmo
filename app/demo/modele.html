@@ -1,0 +1,473 @@
+<title>Expertise augmentée</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Condensed:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
+<style>
+/* Mise en page : bandeau « couverture de dossier », puis deux colonnes — la chaîne d'agents (gauche) et le document consulté (droite). */
+:root {
+  --bg: #e9edf2;
+  --surface: #ffffff;
+  --surface-2: #f4f6f9;
+  --ink: #15202c;
+  --muted: #586678;
+  --line: #d2d9e2;
+  --accent: #1f4b99;
+  --accent-soft: #e3eaf7;
+  --expert: #9a6312;
+  --expert-soft: #f7ecd9;
+  --ok: #2b7a4b;
+  --ok-soft: #e2f2e8;
+  --crit: #b3261e;
+  --crit-soft: #fbe5e3;
+  --warn: #9a6312;
+  --warn-soft: #f7ecd9;
+  --font-ui: "IBM Plex Sans Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --font-doc: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-calc: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e141b; --surface: #161f29; --surface-2: #1c2733; --ink: #e5ebf1; --muted: #98a6b6; --line: #2b3847;
+    --accent: #86aef2; --accent-soft: #1d2d47; --expert: #e2ab52; --expert-soft: #3a2c15; --ok: #63c38a; --ok-soft: #173327;
+    --crit: #f2867b; --crit-soft: #3d1c1a; --warn: #e2ab52; --warn-soft: #3a2c15; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e141b; --surface: #161f29; --surface-2: #1c2733; --ink: #e5ebf1; --muted: #98a6b6; --line: #2b3847;
+  --accent: #86aef2; --accent-soft: #1d2d47; --expert: #e2ab52; --expert-soft: #3a2c15; --ok: #63c38a; --ok-soft: #173327;
+  --crit: #f2867b; --crit-soft: #3d1c1a; --warn: #e2ab52; --warn-soft: #3a2c15; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-ui); font-size: 15px; line-height: 1.45; }
+.wrap { max-width: 1320px; margin: 0 auto; padding-block: 20px 40px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 18px; }
+
+/* Couverture du dossier */
+.cover { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 18px 22px; display: grid; grid-template-columns: 1fr auto; gap: 14px 24px; align-items: end; }
+.cover .eyebrow { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.cover h1 { margin: 4px 0 6px; font-family: var(--font-doc); font-weight: 700; font-size: clamp(22px, 3vw, 30px); line-height: 1.15; text-wrap: balance; }
+.cover .facts { display: flex; flex-wrap: wrap; gap: 6px 18px; color: var(--muted); font-size: 14px; }
+.cover .facts b { color: var(--ink); font-weight: 600; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.btn { font: 600 14px/1 var(--font-ui); border-radius: 4px; padding: 10px 14px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.btn:hover { border-color: var(--accent); }
+.btn:focus-visible, input:focus-visible, select:focus-visible, .tab:focus-visible, .step:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+.btn.expert { background: var(--expert); border-color: var(--expert); color: var(--surface); }
+.btn[disabled] { opacity: .45; cursor: not-allowed; }
+.honest { grid-column: 1 / -1; font-size: 13px; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 10px; }
+
+.main { display: grid; grid-template-columns: minmax(280px, 380px) minmax(0, 1fr); gap: 18px; align-items: start; }
+@media (max-width: 860px) { .main { grid-template-columns: 1fr; } .cover { grid-template-columns: 1fr; } .actions { justify-content: flex-start; } }
+
+/* Chaîne */
+.chain { display: grid; gap: 0; position: relative; }
+.phase-label { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); padding: 10px 2px 6px; }
+.step { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--line); border-radius: 4px; padding: 10px 12px; margin-bottom: 8px; cursor: pointer; display: grid; gap: 4px; text-align: left; width: 100%; font: inherit; color: inherit; }
+.step[data-state="run"] { border-left-color: var(--accent); }
+.step[data-state="done"] { border-left-color: var(--ok); }
+.step[data-state="wait"] { border-left-color: var(--expert); }
+.step[data-state="block"] { border-left-color: var(--crit); }
+.step.is-expert { background: var(--expert-soft); }
+.step.selected { box-shadow: 0 0 0 2px var(--accent) inset; }
+.step-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.step-name { font-weight: 700; font-size: 16px; }
+.step-role { color: var(--muted); font-size: 13px; }
+.chip { font-size: 12px; font-weight: 600; border-radius: 999px; padding: 2px 9px; white-space: nowrap; background: var(--surface-2); color: var(--muted); }
+.chip.run { background: var(--accent-soft); color: var(--accent); }
+.chip.done { background: var(--ok-soft); color: var(--ok); }
+.chip.wait { background: var(--expert-soft); color: var(--expert); }
+.chip.block { background: var(--crit-soft); color: var(--crit); }
+.log { font-family: var(--font-calc); font-size: 12px; color: var(--muted); display: grid; gap: 2px; margin: 2px 0 0; padding: 0; list-style: none; }
+.log li::before { content: "› "; color: var(--accent); }
+.parallel { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+@media (max-width: 420px) { .parallel { grid-template-columns: 1fr; } }
+
+/* Visionneuse */
+.viewer { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; min-width: 0; display: grid; grid-template-rows: auto 1fr; }
+.tabs { display: flex; gap: 2px; overflow-x: auto; border-bottom: 1px solid var(--line); padding: 6px 8px 0; }
+.tab { font: 600 14px var(--font-ui); background: none; border: 0; border-bottom: 3px solid transparent; padding: 8px 10px; color: var(--muted); cursor: pointer; white-space: nowrap; }
+.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+.tab.expert-tab[aria-selected="true"] { border-bottom-color: var(--expert); }
+.panel { padding: 18px 22px 26px; min-width: 0; }
+.source { font-size: 12px; color: var(--muted); margin-bottom: 10px; font-family: var(--font-calc); }
+
+/* Documents */
+.doc { font-family: var(--font-doc); font-size: 16px; line-height: 1.6; max-width: 72ch; }
+.doc h1 { font-size: 24px; line-height: 1.2; margin: 0 0 12px; text-wrap: balance; }
+.doc h2 { font-size: 19px; margin: 26px 0 8px; padding-top: 10px; border-top: 1px solid var(--line); text-wrap: balance; }
+.doc h3 { font-size: 16px; margin: 18px 0 6px; }
+.doc p, .doc li { margin: 0 0 10px; }
+.doc blockquote { margin: 0 0 14px; padding: 10px 14px; background: var(--expert-soft); border-left: 4px solid var(--expert); font-size: 15px; }
+.doc blockquote p:last-child { margin-bottom: 0; }
+.doc code { font-family: var(--font-calc); font-size: 13px; background: var(--surface-2); padding: 1px 4px; border-radius: 3px; }
+.doc hr { border: 0; border-top: 1px solid var(--line); margin: 18px 0; }
+.doc .tbl { overflow-x: auto; margin: 0 0 14px; }
+.doc table { border-collapse: collapse; font-family: var(--font-ui); font-size: 14px; font-variant-numeric: tabular-nums; min-width: 100%; }
+.doc th, .doc td { border: 1px solid var(--line); padding: 5px 8px; text-align: left; vertical-align: top; }
+.doc th { background: var(--surface-2); }
+.live { background: var(--accent-soft); border-radius: 3px; padding: 0 2px; }
+
+/* Arbitrage */
+.arb { display: grid; gap: 16px; max-width: 760px; }
+.arb-intro { font-family: var(--font-doc); font-size: 16px; }
+.arb-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+.field { display: grid; gap: 4px; }
+.field label { font-size: 13px; color: var(--muted); font-weight: 600; }
+.field input, .field select { font: 15px var(--font-calc); padding: 8px 10px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); color: var(--ink); width: 100%; }
+.adj { display: grid; gap: 6px; }
+.adj-row { display: grid; grid-template-columns: minmax(0, 1fr) 96px; gap: 10px; align-items: center; padding: 6px 0; border-bottom: 1px dotted var(--line); }
+.adj-row .why { font-size: 13px; color: var(--muted); }
+.adj-row input { font: 15px var(--font-calc); padding: 6px 8px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); color: var(--ink); width: 100%; text-align: right; }
+.calc { font-family: var(--font-calc); font-size: 14px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 4px; padding: 12px 14px; display: grid; gap: 6px; font-variant-numeric: tabular-nums; overflow-x: auto; }
+.calc .row { display: flex; justify-content: space-between; gap: 16px; }
+.calc .gap { color: var(--crit); font-weight: 600; }
+.calc .fine { color: var(--ok); font-weight: 600; }
+.checks { display: grid; gap: 8px; }
+.check { display: flex; gap: 8px; align-items: flex-start; font-size: 14px; }
+.check input { margin-top: 3px; }
+.notice { border-radius: 4px; padding: 10px 12px; font-size: 14px; }
+.notice.crit { background: var(--crit-soft); color: var(--ink); border-left: 4px solid var(--crit); }
+.notice.ok { background: var(--ok-soft); border-left: 4px solid var(--ok); }
+
+/* Contrôle en direct */
+.findings { display: grid; gap: 8px; margin-bottom: 18px; max-width: 760px; }
+.finding { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start; padding: 10px 12px; border-radius: 4px; background: var(--surface-2); border-left: 4px solid var(--line); }
+.finding.crit { border-left-color: var(--crit); }
+.finding.warn { border-left-color: var(--warn); }
+.finding.ok { border-left-color: var(--ok); }
+.finding .tag { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 2px 7px; border-radius: 3px; white-space: nowrap; }
+.finding.crit .tag { background: var(--crit-soft); color: var(--crit); }
+.finding.warn .tag { background: var(--warn-soft); color: var(--warn); }
+.finding.ok .tag { background: var(--ok-soft); color: var(--ok); }
+.finding p { margin: 0; font-size: 14px; }
+.finding p + p { color: var(--muted); font-size: 13px; margin-top: 2px; }
+.tally { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+details.full { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 10px; }
+details.full summary { cursor: pointer; font-weight: 600; }
+.empty { color: var(--muted); font-family: var(--font-doc); font-size: 16px; max-width: 60ch; }
+@media (prefers-reduced-motion: no-preference) { .step[data-state="run"] .chip { animation: pulse 1.2s ease-in-out infinite; } }
+@keyframes pulse { 50% { opacity: .55; } }
+</style>
+
+<div class="wrap">
+  <header class="cover">
+    <div>
+      <div class="eyebrow">Dossier de démonstration · données fictives</div>
+      <h1>T3 rue Keller, Paris 11e — succession</h1>
+      <div class="facts">
+        <span>Mandant <b>le notaire</b></span>
+        <span>Valeur <b>vénale, libre</b></span>
+        <span>Date de valeur <b>14 octobre 2024</b></span>
+        <span>Surface <b>68 m²</b></span>
+        <span>Registre <b>amiable</b></span>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="btn primary" id="run">Lancer la démonstration</button>
+      <button class="btn" id="reset">Recommencer</button>
+    </div>
+    <p class="honest">Les documents affichés ont été produits par l'équipe d'agents lors de l'essai du 26 octobre 2026. L'animation rejoue cet essai. L'arbitrage de l'expert, le contrôle du Rédacteur, les sections 7 et 8 et le contrôle en direct sont recalculés dans la page à partir des valeurs saisies.</p>
+  </header>
+
+  <div class="main">
+    <section aria-label="Chaîne d'agents">
+      <div class="phase-label">Phase 1 — préparer le dossier</div>
+      <div class="chain" id="chain1"></div>
+      <div class="phase-label">Décision de l'expert</div>
+      <div class="chain" id="chainE"></div>
+      <div class="phase-label">Phase 2 — valoriser et contrôler</div>
+      <div class="chain" id="chain2"></div>
+    </section>
+
+    <section class="viewer" aria-label="Documents">
+      <div class="tabs" role="tablist" id="tabs"></div>
+      <div class="panel" id="panel"></div>
+    </section>
+  </div>
+</div>
+
+<script type="application/json" id="docs">__DOCS__</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+<script>
+(function () {
+  const DOCS = JSON.parse(document.getElementById('docs').textContent);
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Données du cas ---------- */
+  const STATS = { mediane: 9275, moyenne: 9218, ponderee: 9250, c09: 9250 };
+  const BASE_LABELS = { mediane: 'Médiane — 9 275 €/m²', moyenne: 'Moyenne — 9 218 €/m²', ponderee: 'Moyenne pondérée — 9 250 €/m²', c09: 'Vente la plus proche (C-09) — 9 250 €/m²' };
+  const MIN_COURANT = 8849, MIN_VETUSTE = 8720;
+  const DEFAULT = { base: 'mediane', adj: { asc: -3, sdb: -4, vit: -2, parq: 1, cuis: 0, dpe: 0 }, prix: 8820, surface: 68, palier: 5000, maintien: true, reserve: false };
+  const ADJ = [
+    { k: 'asc', label: '3e étage sans ascenseur', why: 'S4 — « l’immeuble n’est pas desservi par un ascenseur »' },
+    { k: 'sdb', label: 'Salle de bains vétuste', why: 'S5 — « nécessite une remise en état complète »' },
+    { k: 'vit', label: 'Double vitrage partiel', why: 'S5 — chambre 2 et cuisine en simple vitrage' },
+    { k: 'parq', label: 'Parquet chêne ancien', why: 'S4 — bon état, entrée, séjour, chambres' },
+    { k: 'cuis', label: 'Cuisine vétuste', why: 'S5 — équipements vétustes (0 = pas d’ajustement)' },
+    { k: 'dpe', label: 'DPE étiquette E', why: 'S3 — 265 kWh/m²/an (0 = pas d’ajustement)' }
+  ];
+  let A = JSON.parse(JSON.stringify(DEFAULT));
+
+  /* ---------- Outils ---------- */
+  const fmt = (n, d = 0) => n.toLocaleString('fr-FR', { minimumFractionDigits: d, maximumFractionDigits: d }).replace(/ /g, ' ');
+  const pct = n => (n > 0 ? '+' : n < 0 ? '−' : '') + fmt(Math.abs(n), Number.isInteger(n) ? 0 : 1) + ' %';
+  const U = ['zéro','un','deux','trois','quatre','cinq','six','sept','huit','neuf','dix','onze','douze','treize','quatorze','quinze','seize'];
+  const T = { 2: 'vingt', 3: 'trente', 4: 'quarante', 5: 'cinquante', 6: 'soixante' };
+  function b100(n) {
+    if (n < 17) return U[n];
+    if (n < 20) return 'dix-' + U[n - 10];
+    if (n < 70) { const t = T[Math.floor(n / 10)], u = n % 10; return u === 0 ? t : u === 1 ? t + ' et un' : t + '-' + U[u]; }
+    if (n < 80) return n === 71 ? 'soixante et onze' : 'soixante-' + b100(n - 60);
+    return n === 80 ? 'quatre-vingts' : 'quatre-vingt-' + b100(n - 80);
+  }
+  function b1000(n) {
+    const h = Math.floor(n / 100), r = n % 100;
+    if (!h) return b100(r);
+    let s = h === 1 ? 'cent' : U[h] + ' cent';
+    if (!r && h > 1) s += 's';
+    return r ? s + ' ' + b100(r) : s;
+  }
+  function enLettres(n) {
+    n = Math.round(n);
+    if (n === 0) return 'zéro euro';
+    const m = Math.floor(n / 1e6), k = Math.floor((n % 1e6) / 1000), r = n % 1000, p = [];
+    if (m) p.push(m === 1 ? 'un million' : b1000(m).replace(/s$/, '') + ' millions');
+    if (k) p.push(k === 1 ? 'mille' : b1000(k).replace(/cents$/, 'cent').replace(/vingts$/, 'vingt') + ' mille');
+    if (r) p.push(b1000(r));
+    return p.join(' ') + (m && !k && !r ? ' d\u2019euros' : ' euros');
+  }
+  function calc() {
+    const base = STATS[A.base];
+    const tot = Object.values(A.adj).reduce((s, v) => s + (Number(v) || 0), 0);
+    const prixCalc = Math.round(base * (1 + tot / 100));
+    const ecart = A.prix - prixCalc;
+    const avant = A.prix * A.surface;
+    const arrondi = Math.round(avant / A.palier) * A.palier;
+    const avantCalc = prixCalc * A.surface;
+    const arrondiCalc = Math.round(avantCalc / A.palier) * A.palier;
+    const implicite = (A.prix / base - 1) * 100;
+    return { base, tot, prixCalc, ecart, avant, arrondi, avantCalc, arrondiCalc, implicite, coherent: Math.abs(ecart) <= 1 };
+  }
+  const md = s => { const html = marked.parse(s); return html.replace(/<table>/g, '<div class="tbl"><table>').replace(/<\/table>/g, '</table></div>'); };
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  /* ---------- Étapes ---------- */
+  const STEPS = {
+    mission: { name: 'Mission', role: 'Pose le contexte, prépare l’arbitrage', doc: 'mission', log: ['Lettre de mission lue : succession, amiable, mandant notaire', '7 pièces communiquées recensées', 'Pièces manquantes : Carrez, état hypothécaire, AG 2024, diagnostics', 'Pièces des notes : 57 m² détaillés pour 68 m² annoncés', 'Formulaire d’arbitrage préparé, sans aucun pourcentage'] },
+    collecte: { name: 'Collecte', role: 'Calcule le marché', doc: 'collecte', log: ['10 ventes DVF, janv.–août 2024', 'Prix/m² recalculés : écart max 0,87 €', 'Fourchette 8 720 – 9 614 €/m²', 'Moyenne 9 218 · pondérée 9 250 · médiane 9 275', 'PLU révisé le 20/11/2024 : zone à vérifier'] },
+    visite: { name: 'Visite', role: 'Rédige S2, S4, S5', doc: 'visite', log: ['Notes brutes → prose à la 1re personne', 'Points faibles sans atténuation : SDB, cuisine, simple vitrage', 'Travaux indicatifs 15 000 – 26 500 €', '9 points à vérifier transmis à l’expert'] },
+    redac1: { name: 'Rédacteur', role: 'Assemble S1 à S6, mentions, clauses', doc: 'rapport', log: ['Page de garde, S1 à S6, forces / faiblesses', 'Mention IA/RGPD copiée mot pour mot', 'Textes standard de l’expert insérés tels quels', 'S7 et S8 en attente de l’arbitrage'] },
+    expert: { name: 'L’expert', role: 'Arrête comparables, ajustements, prix', doc: 'arbitrage', expert: true, log: [] },
+    redac2: { name: 'Rédacteur', role: 'Vérifie l’arbitrage, rédige S7 et S8', doc: 'rapport', log: [] },
+    controleur: { name: 'Contrôleur', role: 'Recalcule et vérifie tout', doc: 'controle', log: [] }
+  };
+  const state = {};
+  Object.keys(STEPS).forEach(k => state[k] = { s: 'idle', shown: 0 });
+  let current = 'mission', running = false, phase2Done = false, timers = [];
+
+  const CHIP = { idle: ['En attente', ''], run: ['En cours', 'run'], done: ['Terminé', 'done'], wait: ['À décider', 'wait'], block: ['Bloqué', 'block'] };
+  function stepHTML(k) {
+    const st = STEPS[k], s = state[k], [txt, cls] = CHIP[s.s];
+    const lines = (s.s === 'idle' ? [] : st.log.slice(0, s.shown)).map(l => '<li>' + esc(l) + '</li>').join('');
+    return '<button class="step' + (st.expert ? ' is-expert' : '') + (current === k ? ' selected' : '') + '" data-k="' + k + '" data-state="' + s.s + '">' +
+      '<span class="step-head"><span class="step-name">' + st.name + '</span><span class="chip ' + cls + '">' + txt + '</span></span>' +
+      '<span class="step-role">' + st.role + '</span>' + (lines ? '<ul class="log">' + lines + '</ul>' : '') + '</button>';
+  }
+  function renderChain() {
+    document.getElementById('chain1').innerHTML = stepHTML('mission') + '<div class="parallel">' + stepHTML('collecte') + stepHTML('visite') + '</div>' + stepHTML('redac1');
+    document.getElementById('chainE').innerHTML = stepHTML('expert');
+    document.getElementById('chain2').innerHTML = stepHTML('redac2') + stepHTML('controleur');
+    document.querySelectorAll('.step').forEach(b => b.addEventListener('click', () => select(b.dataset.k)));
+  }
+
+  /* ---------- Onglets ---------- */
+  const TABS = [
+    { id: 'mission', label: 'Fiche mission' },
+    { id: 'collecte', label: 'Marché (S6)' },
+    { id: 'visite', label: 'Description (S2·S4·S5)' },
+    { id: 'arbitrage', label: 'Arbitrage de l’expert', expert: true },
+    { id: 'rapport', label: 'Projet de rapport' },
+    { id: 'controle', label: 'Contrôle' }
+  ];
+  let tab = 'mission';
+  function renderTabs() {
+    document.getElementById('tabs').innerHTML = TABS.map(t => '<button class="tab' + (t.expert ? ' expert-tab' : '') + '" role="tab" aria-selected="' + (t.id === tab) + '" data-t="' + t.id + '">' + t.label + '</button>').join('');
+    document.querySelectorAll('.tab').forEach(b => b.addEventListener('click', () => { tab = b.dataset.t; renderTabs(); renderPanel(); }));
+  }
+  function select(k) { current = k; tab = STEPS[k].doc; renderChain(); renderTabs(); renderPanel(); }
+
+  /* ---------- Rapport : S7 et S8 en direct ---------- */
+  function liveS7S8() {
+    const c = calc();
+    const adjLines = ADJ.filter(a => Number(A.adj[a.k])).map(a => '- ' + pct(Number(A.adj[a.k])) + ' : ' + a.label.toLowerCase() + ' (' + a.why + ') ;').join('\n');
+    const sansAdj = ADJ.filter(a => (a.k === 'cuis' || a.k === 'dpe') && !Number(A.adj[a.k])).map(a => a.k === 'cuis' ? 'les équipements vétustes de la cuisine' : 'l’étiquette énergétique E');
+    const baseTxt = { mediane: 'la médiane des dix ventes retenues (C-01 à C-10), soit 9 275 €/m²', moyenne: 'la moyenne des dix ventes retenues, soit 9 218 €/m²', ponderee: 'la moyenne pondérée par la surface des dix ventes, soit 9 250 €/m²', c09: 'la vente la plus proche du bien (C-09), soit 9 250 €/m²' }[A.base];
+    const s7 = '## 7. Méthode et valorisation\n\n' +
+      'J’ai retenu la méthode par comparaison directe : l’appartement relève du marché des logements anciens du 11e arrondissement, pour lequel je dispose de dix ventes intervenues entre janvier et août 2024, analysées en section 6. J’ai écarté la méthode par capitalisation du revenu, le bien n’étant pas un bien locatif, et la méthode par le coût de remplacement, s’agissant d’un appartement situé dans un immeuble ancien de 1932 pour lequel un marché de comparables est disponible.\n\n' +
+      'J’ai pris pour base ' + baseTxt + ', et j’ai arrêté les ajustements suivants :\n' + adjLines + '\n\n' +
+      (sansAdj.length ? 'Je n’ai pas retenu d’ajustement propre pour ' + sansAdj.join(' ni pour ') + ' [MOTIF À PRÉCISER PAR L’EXPERT].\n\n' : '') +
+      'Je retiens un prix unitaire de <span class="live">' + fmt(A.prix) + ' €/m²</span>. Appliqué à la superficie de ' + fmt(A.surface) + ' m² que je retiens, dans l’attente du certificat de mesurage loi Carrez, il conduit au calcul suivant : ' + fmt(A.prix) + ' €/m² × ' + fmt(A.surface) + ' m² = <span class="live">' + fmt(c.avant) + ' €</span>, soit une valeur avant arrondi de ' + enLettres(c.avant) + '.\n\n---\n\n';
+    const s8 = '## 8. Conclusion — valeur vénale\n\n' +
+      'Au terme de mes constatations et de l’analyse qui précède, j’estime la valeur vénale de l’appartement de type T3 situé au 3e étage d’un immeuble rue Keller, Paris 11e, libre de toute occupation, à la date du 14 octobre 2024, à <span class="live"><strong>' + fmt(c.arrondi) + ' € (' + enLettres(c.arrondi) + ')</strong></span>, hors droits et hors frais de mutation, valeur arrondie au palier de ' + fmt(A.palier) + ' €. ' +
+      (A.reserve ? 'Cette valeur est donnée sous réserve du certificat de mesurage loi Carrez et des pièces non communiquées listées en fin de rapport.' : 'Aucune réserve particulière.') +
+      ' Cette valeur peut servir de base à l’établissement de la déclaration de succession.\n\n---\n\n';
+    return s7 + s8;
+  }
+  function reportMarkdown() {
+    let r = DOCS.rapport;
+    const head = r.indexOf('> **NOTE INTERNE');
+    const garde = r.indexOf('## Page de garde');
+    const c = calc();
+    let note = '';
+    if (phase2Done && !c.coherent) {
+      note = '> **NOTE INTERNE — À RETIRER AVANT DIFFUSION**\n>\n> **Écart de calcul maintenu par l’expert.** Base ' + fmt(c.base) + ' €/m² × (1 ' + (c.tot < 0 ? '−' : '+') + ' ' + fmt(Math.abs(c.tot), Number.isInteger(c.tot) ? 0 : 1) + ' %) = ' + fmt(c.prixCalc) + ' €/m² ; prix unitaire retenu : ' + fmt(A.prix) + ' €/m². Avec ' + fmt(c.prixCalc) + ' €/m², la valeur serait de ' + fmt(c.arrondiCalc) + ' €.\n\n---\n\n';
+    }
+    if (head > -1 && garde > head) r = r.slice(0, head) + note + r.slice(garde);
+    const i7 = r.indexOf('## 7.'), iR = r.indexOf('## Réserves et clauses');
+    const attente = '## 7. Méthode et valorisation\n\n*[EN ATTENTE DE L’ARBITRAGE DE L’EXPERT]*\n\n---\n\n## 8. Conclusion — valeur vénale\n\n*[EN ATTENTE DE L’ARBITRAGE DE L’EXPERT]*\n\n---\n\n';
+    if (i7 > -1 && iR > i7) r = r.slice(0, i7) + (phase2Done ? liveS7S8() : attente) + r.slice(iR);
+    return r;
+  }
+
+  /* ---------- Contrôle en direct ---------- */
+  function liveFindings() {
+    const c = calc(), f = [];
+    if (!c.coherent) f.push({ g: 'crit', t: 'Le prix unitaire ne découle pas du calcul annoncé (S7).', d: 'Base ' + fmt(c.base) + ' €/m² et ajustements ' + pct(c.tot) + ' donnent ' + fmt(c.prixCalc) + ' €/m², pas ' + fmt(A.prix) + ' €/m² (ajustement implicite ' + pct(Math.round(c.implicite * 10) / 10) + '). Valeur : ' + fmt(c.arrondi) + ' € au lieu de ' + fmt(c.arrondiCalc) + ' €.' });
+    else f.push({ g: 'ok', t: 'Le prix unitaire découle de la base et des ajustements.', d: fmt(c.base) + ' €/m² × (1 ' + (c.tot < 0 ? '−' : '+') + ' ' + fmt(Math.abs(c.tot), Number.isInteger(c.tot) ? 0 : 1) + ' %) = ' + fmt(c.prixCalc) + ' €/m².' });
+    if (!A.reserve) f.push({ g: 'crit', t: '« Aucune réserve particulière » contredit le rapport (S8).', d: 'La valeur repose sur 68 m² non mesurés (57 m² détaillés) et le rapport liste des pièces non communiquées : Carrez, état hypothécaire, AG 2024, diagnostics.' });
+    else f.push({ g: 'ok', t: 'La conclusion porte les réserves attendues.', d: 'Certificat Carrez et pièces non communiquées mentionnés en S8.' });
+    if (!c.coherent) f.push({ g: 'crit', t: 'Note interne en tête du rapport, avec une seconde valeur.', d: 'À supprimer avant toute diffusion.' });
+    if (A.prix < MIN_COURANT) f.push({ g: 'warn', t: 'Prix retenu sous toutes les ventes en état « courant ».', d: fmt(A.prix) + ' €/m² < ' + fmt(MIN_COURANT) + ' €/m², alors que le bien est qualifié « courant ». La médiane inclut déjà des biens vétustes et sans ascenseur : risque de double comptage des ajustements.' + (A.prix < MIN_VETUSTE ? ' Le prix passe même sous les ventes vétustes.' : '') });
+    if (A.surface !== 57) f.push({ g: 'warn', t: 'Surface retenue non justifiée par une pièce.', d: fmt(A.surface) + ' m² retenus, 57 m² détaillés : ' + fmt(A.surface - 57) + ' m² représentent ' + fmt((A.surface - 57) * A.prix) + ' € au prix retenu.' });
+    const sans = ['cuis', 'dpe'].filter(k => !Number(A.adj[k]));
+    if (sans.length) f.push({ g: 'warn', t: 'Point faible sans ajustement ni motif.', d: (sans.length === 2 ? 'Cuisine vétuste et DPE E' : sans[0] === 'cuis' ? 'Cuisine vétuste' : 'DPE E') + ' décrits en S5/S3, sans ajustement en S7 : motif à préciser.' });
+    f.push({ g: 'ok', t: 'Recalculs justes : multiplication, arrondi, valeur en lettres.', d: fmt(A.prix) + ' × ' + fmt(A.surface) + ' = ' + fmt(c.avant) + ' € → ' + fmt(c.arrondi) + ' € (' + enLettres(c.arrondi) + ').' });
+    f.push({ g: 'ok', t: 'Mention IA/RGPD identique au texte standard ; aucune donnée identifiante.', d: 'Vérifié lors de l’essai du 26/10/2026.' });
+    return f;
+  }
+  const isDefault = () => JSON.stringify(A) === JSON.stringify(DEFAULT);
+
+  /* ---------- Panneau ---------- */
+  function renderPanel() {
+    const p = document.getElementById('panel');
+    const SRC = { mission: 'sorties/fiche-mission.md — agent Mission', collecte: 'sorties/collecte.md — agent Collecte', visite: 'sorties/description.md — agent Visite', rapport: 'sorties/projet-rapport.md — agent Rédacteur', controle: 'sorties/controle.md — agent Contrôleur' };
+    const ready = { mission: state.mission.s === 'done', collecte: state.collecte.s === 'done', visite: state.visite.s === 'done', rapport: state.redac1.s === 'done', controle: state.controleur.s === 'done' };
+    if (tab === 'arbitrage') { renderArbitrage(p); return; }
+    if (!ready[tab]) { p.innerHTML = '<p class="empty">Ce document apparaîtra quand l’agent aura terminé. Lancez la démonstration, ou cliquez sur une étape déjà terminée.</p>'; return; }
+    if (tab === 'controle') {
+      const f = liveFindings();
+      const n = g => f.filter(x => x.g === g).length;
+      p.innerHTML = '<div class="source">Contrôle en direct, recalculé à partir de l’arbitrage saisi</div>' +
+        '<div class="tally"><span class="chip block">' + n('crit') + ' bloquant' + (n('crit') > 1 ? 's' : '') + '</span><span class="chip wait">' + n('warn') + ' à corriger</span><span class="chip done">' + n('ok') + ' conformes</span></div>' +
+        '<div class="findings">' + f.map(x => '<div class="finding ' + x.g + '"><span class="tag">' + ({ crit: 'Bloquant', warn: 'À corriger', ok: 'Conforme' }[x.g]) + '</span><div><p>' + esc(x.t) + '</p><p>' + esc(x.d) + '</p></div></div>').join('') + '</div>' +
+        '<details class="full"' + (isDefault() ? '' : '') + '><summary>Rapport complet de l’agent Contrôleur — essai du 26/10/2026' + (isDefault() ? '' : ' (établi avec l’arbitrage de la formation, pas avec vos nouvelles valeurs)') + '</summary><div class="doc">' + md(DOCS.controle) + '</div></details>';
+      return;
+    }
+    const text = tab === 'rapport' ? reportMarkdown() : DOCS[tab];
+    p.innerHTML = '<div class="source">' + SRC[tab] + '</div><div class="doc">' + md(text) + '</div>';
+  }
+
+  function renderArbitrage(p) {
+    const c = calc();
+    const open = state.expert.s === 'wait' || state.expert.s === 'done' || state.expert.s === 'block';
+    const locked = running;
+    p.innerHTML = '<div class="arb">' +
+      '<p class="arb-intro">Ces décisions appartiennent à l’expert : aucun agent ne choisit la base, les ajustements, le prix unitaire ni l’arrondi. Modifiez une valeur, la page recalcule aussitôt ce que le Rédacteur vérifiera.</p>' +
+      (open ? '' : '<div class="notice ok">Le formulaire est prérempli avec l’arbitrage de la formation. Il devient actif quand la phase 1 est terminée, mais vous pouvez déjà l’explorer.</div>') +
+      '<div class="arb-grid">' +
+      '<div class="field"><label for="f-base">Base de calcul</label><select id="f-base">' + Object.keys(BASE_LABELS).map(k => '<option value="' + k + '"' + (A.base === k ? ' selected' : '') + '>' + BASE_LABELS[k] + '</option>').join('') + '</select></div>' +
+      '<div class="field"><label for="f-prix">Prix unitaire retenu (€/m²)</label><input id="f-prix" type="number" step="1" value="' + A.prix + '"></div>' +
+      '<div class="field"><label for="f-surf">Surface retenue (m²)</label><input id="f-surf" type="number" step="0.01" value="' + A.surface + '"></div>' +
+      '<div class="field"><label for="f-pal">Palier d’arrondi (€)</label><select id="f-pal">' + [1000, 5000, 10000].map(v => '<option value="' + v + '"' + (A.palier === v ? ' selected' : '') + '>' + fmt(v) + ' €</option>').join('') + '</select></div>' +
+      '</div>' +
+      '<div class="adj">' + ADJ.map(a => '<div class="adj-row"><div><label for="adj-' + a.k + '"><b>' + a.label + '</b></label><div class="why">' + esc(a.why) + '</div></div><input id="adj-' + a.k + '" type="number" step="0.5" value="' + A.adj[a.k] + '" aria-label="Ajustement en % : ' + esc(a.label) + '"></div>').join('') + '</div>' +
+      '<div class="calc" id="calcbox"></div>' +
+      '<div class="checks">' +
+      '<label class="check" id="maintien-wrap"><input type="checkbox" id="f-maint"' + (A.maintien ? ' checked' : '') + '> <span>Je maintiens mes valeurs en connaissance de l’écart</span></label>' +
+      '<label class="check"><input type="checkbox" id="f-res"' + (A.reserve ? ' checked' : '') + '> <span>Ajouter en conclusion une réserve (certificat Carrez et pièces non communiquées)</span></label>' +
+      '</div>' +
+      '<div><button class="btn expert" id="validate"' + (state.expert.s === 'wait' && !locked ? '' : ' disabled') + '>Valider l’arbitrage et lancer la phase 2</button> <button class="btn" id="restore">Revenir aux valeurs de la formation</button></div>' +
+      '</div>';
+    const bind = (id, fn) => document.getElementById(id).addEventListener('input', e => { fn(e.target); updateCalc(); });
+    bind('f-base', t => A.base = t.value);
+    bind('f-prix', t => A.prix = Math.round(Number(t.value) || 0));
+    bind('f-surf', t => A.surface = Number(t.value) || 0);
+    bind('f-pal', t => A.palier = Number(t.value));
+    ADJ.forEach(a => bind('adj-' + a.k, t => A.adj[a.k] = Number(t.value) || 0));
+    document.getElementById('f-maint').addEventListener('change', e => { A.maintien = e.target.checked; });
+    document.getElementById('f-res').addEventListener('change', e => { A.reserve = e.target.checked; });
+    document.getElementById('validate').addEventListener('click', phase2);
+    document.getElementById('restore').addEventListener('click', () => { A = JSON.parse(JSON.stringify(DEFAULT)); renderPanel(); });
+    updateCalc();
+  }
+  function updateCalc() {
+    const box = document.getElementById('calcbox'); if (!box) return;
+    const c = calc();
+    box.innerHTML =
+      '<div class="row"><span>Base</span><span>' + fmt(c.base) + ' €/m²</span></div>' +
+      '<div class="row"><span>Total des ajustements</span><span>' + pct(c.tot) + '</span></div>' +
+      '<div class="row"><span>Prix issu du calcul</span><span>' + fmt(c.prixCalc) + ' €/m²</span></div>' +
+      '<div class="row"><span>Prix retenu par l’expert</span><span>' + fmt(A.prix) + ' €/m²</span></div>' +
+      '<div class="row"><span>Écart</span><span class="' + (c.coherent ? 'fine' : 'gap') + '">' + (c.coherent ? 'aucun' : (c.ecart > 0 ? '+' : '−') + fmt(Math.abs(c.ecart)) + ' €/m² (ajustement implicite ' + pct(Math.round(c.implicite * 10) / 10) + ')') + '</span></div>' +
+      '<div class="row"><span>Valeur avant arrondi</span><span>' + fmt(A.prix) + ' × ' + fmt(A.surface, A.surface % 1 ? 2 : 0) + ' = ' + fmt(c.avant) + ' €</span></div>' +
+      '<div class="row"><span>Valeur arrondie</span><span><b>' + fmt(c.arrondi) + ' €</b></span></div>' +
+      '<div class="row"><span></span><span>' + enLettres(c.arrondi) + '</span></div>' +
+      (c.coherent ? '' : '<div class="row"><span>Au prix calculé</span><span>' + fmt(c.arrondiCalc) + ' €</span></div>');
+    const mw = document.getElementById('maintien-wrap'); if (mw) mw.hidden = c.coherent;
+  }
+
+  /* ---------- Animation ---------- */
+  const wait = ms => new Promise(r => timers.push(setTimeout(r, reduce ? 0 : ms)));
+  async function play(k, logs) {
+    if (logs) STEPS[k].log = logs;
+    state[k] = { s: 'run', shown: 0 }; current = k; tab = STEPS[k].doc; renderChain(); renderTabs(); renderPanel();
+    for (let i = 1; i <= STEPS[k].log.length; i++) { await wait(650); state[k].shown = i; renderChain(); }
+    await wait(350);
+  }
+  async function phase1() {
+    if (running) return; running = true; document.getElementById('run').disabled = true;
+    await play('mission'); state.mission.s = 'done';
+    state.collecte = { s: 'run', shown: 0 }; state.visite = { s: 'run', shown: 0 }; current = 'collecte'; tab = 'collecte'; renderChain(); renderTabs(); renderPanel();
+    const n = Math.max(STEPS.collecte.log.length, STEPS.visite.log.length);
+    for (let i = 1; i <= n; i++) { await wait(650); state.collecte.shown = Math.min(i, STEPS.collecte.log.length); state.visite.shown = Math.min(i, STEPS.visite.log.length); renderChain(); }
+    state.collecte.s = 'done'; state.visite.s = 'done'; renderChain(); renderPanel(); await wait(400);
+    await play('redac1'); state.redac1.s = 'done';
+    state.expert = { s: 'wait', shown: 0 }; running = false;
+    select('expert');
+  }
+  async function phase2() {
+    if (running || state.expert.s !== 'wait' && state.expert.s !== 'block') return;
+    running = true; const c = calc();
+    state.expert = { s: 'done', shown: 0 }; STEPS.expert.log = ['Base ' + fmt(c.base) + ' €/m², ajustements ' + pct(c.tot), 'Prix retenu ' + fmt(A.prix) + ' €/m² · ' + fmt(A.surface) + ' m²'];
+    state.expert.shown = 2;
+    const logs = ['Vérification de l’arbitrage au calcul', fmt(c.base) + ' × (1 ' + (c.tot < 0 ? '−' : '+') + ' ' + fmt(Math.abs(c.tot), Number.isInteger(c.tot) ? 0 : 1) + ' %) = ' + fmt(c.prixCalc) + ' €/m²'];
+    if (!c.coherent && !A.maintien) {
+      logs.push('Écart de ' + fmt(Math.abs(c.ecart)) + ' €/m² avec le prix retenu', 'Rédaction de S7 et S8 suspendue : l’expert doit trancher');
+      await play('redac2', logs); state.redac2.s = 'block'; state.expert.s = 'block'; running = false; renderChain(); select('expert'); return;
+    }
+    logs.push(c.coherent ? 'Arbitrage cohérent' : 'Écart de ' + fmt(Math.abs(c.ecart)) + ' €/m² — maintenu par l’expert', 'S7 et S8 rédigées : ' + fmt(c.arrondi) + ' €');
+    phase2Done = true;
+    await play('redac2', logs); state.redac2.s = 'done';
+    const f = liveFindings(), n = g => f.filter(x => x.g === g).length;
+    await play('controleur', ['Tous les chiffres recalculés', 'Cohérence S4 · S5 · S7 · S8 vérifiée', 'Mention IA/RGPD comparée au texte standard', n('crit') + ' bloquant(s) · ' + n('warn') + ' à corriger']);
+    state.controleur.s = 'done'; running = false; select('controleur');
+  }
+  function reset() {
+    timers.forEach(clearTimeout); timers = [];
+    Object.keys(STEPS).forEach(k => state[k] = { s: 'idle', shown: 0 });
+    STEPS.redac2.log = []; STEPS.controleur.log = []; STEPS.expert.log = [];
+    running = false; phase2Done = false; A = JSON.parse(JSON.stringify(DEFAULT));
+    document.getElementById('run').disabled = false; current = 'mission'; tab = 'mission';
+    renderChain(); renderTabs(); renderPanel();
+  }
+  document.getElementById('run').addEventListener('click', phase1);
+  document.getElementById('reset').addEventListener('click', reset);
+
+  /* État initial : phase 1 déjà jouée, l'expert a la main — la page montre d'emblée ce que fait l'outil. */
+  ['mission', 'collecte', 'visite', 'redac1'].forEach(k => state[k] = { s: 'done', shown: STEPS[k].log.length });
+  state.expert = { s: 'wait', shown: 0 };
+  current = 'expert'; tab = 'arbitrage';
+  renderChain(); renderTabs(); renderPanel();
+})();
+</script>

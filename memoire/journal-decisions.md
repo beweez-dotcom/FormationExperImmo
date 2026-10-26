@@ -56,3 +56,7 @@ Une ligne par décision : la date, ce qui a été décidé, et pourquoi.
 - Date du rapport : 26 octobre 2026 (choix de Rob'r ; la date de valeur reste le 14/10/2024).
 - **Profil d'expert de démonstration** (`entrees/profil-expert.md`) : identité fictive, sans coordonnées ni numéros ; textes standard (déclarations, clauses, réserves) rédigés à partir de la Charte et des pratiques observées, sans copie. À remplacer par les textes d'un expert réel.
 - Résultat : 3 bloquants, 11 à corriger, 10 suggestions, 12 espaces réservés. Nouveau point du Contrôleur : 8 820 €/m² place le bien sous toutes les ventes « courantes », risque de double comptage des ajustements sur une médiane qui inclut déjà des biens vétustes et sans ascenseur.
+
+## 2026-10-26 — Interface de démonstration (v1)
+
+- Page web « Expertise augmentée » publiée (privée) : chaîne d'agents en deux phases, documents réels de l'essai, arbitrage de l'expert modifiable en direct, S7/S8 et contrôle recalculés dans la page. Pourquoi : montrer aux experts que la décision leur reste, et que chaque modification est vérifiée instantanément. La page dit clairement qu'elle rejoue l'essai (pas d'agents en direct dans le navigateur).
