@@ -18,3 +18,10 @@ Une ligne par décision : la date, ce qui a été décidé, et pourquoi.
 - **Caviardage réel** (texte supprimé, propriétés du fichier vidées, filigrane retiré), jamais un simple cache. Pourquoi : les originaux contenaient de faux caviardages, lisibles par copier-coller.
 - **Le rapport « hôtel » (expert 2, valeur locative) ne sera pas projeté en démo publique.** Pourquoi : le bien reste reconnaissable localement, même anonymisé.
 - **Les originaux sortent du dossier ClaudeProjects** (synchronisé avec MEGA) et ne vont jamais sur GitHub.
+
+## 2026-10-26 — Analyse des structures
+
+- **Plan type = tronc commun de 14 sections + modules par type** (financement, succession, bail commercial). Pourquoi : les 3 rapports partagent le même contenu obligatoire, mais le type d'expertise ajoute des blocs entiers (le bail commercial suit le Code de commerce).
+- **Prévoir un « profil d'expert »** (voix « je » ou impersonnelle, synthèse en tête ou non, textes généraux repris tels quels). Pourquoi : les deux experts ont le même fond mais une forme très différente.
+- **Le Contrôleur recalcule** (accès au calcul autorisé), il ne se contente pas de relire. Pourquoi : sur 3 rapports réels, une dizaine d'incohérences chiffrées, dont une valeur finale non justifiée par le calcul annoncé.
+- **Argument central de la démo** : « sur 3 rapports réels, voici ce que l'agent Contrôleur aurait relevé » (anonymisé, sans jamais nommer ni viser les experts).
