@@ -25,7 +25,7 @@ Une démonstration live devant les adhérents d'associations d'experts immobilie
 
 ## Règles d'or (non négociables)
 
-1. **Aucun agent ne fixe la valeur finale.** La conclusion reste un emplacement vide : `[VALEUR À DÉTERMINER PAR L'EXPERT]`. Les agents peuvent présenter les comparables et les calculs de méthode, jamais conclure.
+1. **« L'IA rédige. L'expert signe. »** Aucun agent ne choisit les comparables retenus, les ajustements, le prix unitaire ou l'arrondi : l'expert les arrête dans `arbitrage-expert.md`, entre les deux phases de la chaîne. Les agents mettent en forme et calculent, ils ne décident pas.
 2. **Aucun chiffre inventé.** Toute donnée de marché, de surface ou de réglementation cite sa source et sa date. Sinon : `[DONNÉE MANQUANTE — à fournir par l'expert]`.
 3. **Données anonymisées uniquement** dans ce dossier (pas de noms de clients ou d'héritiers, pas d'adresse exacte, pas de références cadastrales réelles). Le dossier est synchronisé avec MEGA.
 4. **Transparence** : le rapport mentionne l'usage d'outils d'IA et le traitement des données (RGPD).
@@ -33,26 +33,30 @@ Une démonstration live devant les adhérents d'associations d'experts immobilie
 
 ## L'équipe métier (dans `.claude/agents/`)
 
-Les agents travaillent dans cet ordre :
+La chaîne suit le rapport en 8 sections de la formation, en **deux phases** :
 
-| Ordre | Agent | Rôle | Produit |
+| Phase | Agent | Rôle | Produit |
 |---|---|---|---|
-| 1 | `mission` | Lit la lettre de mission, identifie le type d'expertise, choisit le plan | `fiche-mission.md` |
-| 2 | `collecte` | Rassemble les données publiques (ventes comparables, urbanisme, risques) | `collecte.md` |
-| 3 | `visite` | Transforme les notes de visite en description structurée du bien | `description.md` |
-| 4 | `redacteur` | Assemble le projet de rapport section par section | `projet-rapport.md` |
-| 5 | `controleur` | Vérifie la conformité à la Charte et la cohérence | `controle.md` |
+| 1 | `mission` | Pose le contexte, identifie la mission, prépare le formulaire d'arbitrage | `fiche-mission.md`, `arbitrage-expert.md` |
+| 1 | `collecte` | Calcule les statistiques du tableau de comparables fourni, données publiques | `collecte.md` (S6) |
+| 1 | `visite` | Transforme les notes brutes en S2, S4, S5 | `description.md` |
+| 1 | `redacteur` | Assemble page de garde, S1 à S6, mentions et clauses | `projet-rapport.md` |
+| — | **l'expert** | **Remplit l'arbitrage : comparables, ajustements, prix unitaire, arrondi** | `arbitrage-expert.md` |
+| 2 | `redacteur` | Vérifie l'arbitrage et rédige S7 et S8 | `projet-rapport.md` |
+| 2 | `controleur` | Recalcule tout, vérifie Charte, cohérence et registre | `controle.md` |
 
-Les étapes 2 et 3 sont indépendantes et peuvent se faire en parallèle.
+`collecte` et `visite` travaillent en parallèle. Le `controleur` peut aussi contrôler un rapport rédigé par un tiers (mission prévue par la Charte, Titre II ch. 6).
 
 ## Les skills (dans `.claude/skills/`)
 
-- `chaine-rapport` : comment lancer toute la chaîne sur un dossier (le chef d'orchestre).
-- `plan-rapport` : le plan type (tronc commun + variantes selon le type d'expertise).
-- `charte-expertise` : la check-list de conformité.
-- `style-redactionnel` : le ton et les tournures d'un expert.
-- `donnees-marche` : où chercher les données et comment les citer.
-- `deontologie-rgpd` : anonymisation, information du client, limites de l'IA.
+- `chaine-rapport` : la chaîne en deux phases (le chef d'orchestre).
+- `plan-rapport` : les 8 sections de la formation + le cadre obligatoire de la Charte (ch. 10.2) + les modules par mission.
+- `charte-expertise` : complétude Charte, recalculs, cohérence, les 4 contrôles de relecture de la formation.
+- `style-redactionnel` : première personne, registre amiable ou judiciaire, formules prudentes, formules à bannir.
+- `donnees-marche` : DVF et autres sources, nettoyage, calculs avant rédaction.
+- `deontologie-rgpd` : anonymisation, Charte ch. 6, **mentions IA/RGPD standard à insérer telles quelles**.
+
+La Charte (PDF dans `sources/formation/`) est protégée : usage interne uniquement, jamais recopiée ni diffusée, jamais envoyée sur GitHub.
 
 ## Organisation des dossiers
 

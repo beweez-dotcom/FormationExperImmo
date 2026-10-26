@@ -1,29 +1,33 @@
 ---
 name: chaine-rapport
-description: Lance toute l'équipe d'agents sur un dossier d'expertise pour produire un projet de rapport. À utiliser quand on demande de préparer, rédiger ou générer un rapport d'expertise pour un dossier de cas-tests/.
+description: Fait travailler toute l'équipe d'agents sur un dossier d'expertise, en deux phases séparées par la décision de l'expert (arbitrage). À utiliser quand on demande de préparer, rédiger ou générer un rapport d'expertise pour un dossier de cas-tests/.
 ---
 
-# Préparer un projet de rapport d'expertise
+# Préparer un rapport d'expertise — la chaîne en deux phases
+
+> Principe de la formation : **« L'IA rédige. L'expert signe. »** Les ajustements et le prix unitaire sont décidés par l'expert, jamais par un agent. La chaîne s'arrête donc entre les deux phases.
 
 ## Avant de commencer
+1. Dossier du cas dans `cas-tests/<nom>/` (copier `_modele-dossier/` si besoin).
+2. Vérifier dans `entrees/` : lettre de mission, liste des pièces, notes de visite, tableau des comparables. S'il manque un élément, le dire à l'utilisateur **avant** de lancer la chaîne.
+3. Vérifier qu'aucune donnée identifiante ne figure dans `entrees/` (skill `deontologie-rgpd`). Sinon, s'arrêter et le signaler.
 
-1. Identifier le dossier du cas dans `cas-tests/` (en créer un en copiant `cas-tests/_modele-dossier/` si besoin).
-2. Vérifier que `entrees/` contient au minimum la lettre de mission et les notes de visite. S'il manque quelque chose, le dire à l'utilisateur avant de lancer la chaîne.
+## Phase 1 — Préparer le dossier (sans valeur)
+1. **`mission`** → `sorties/fiche-mission.md` et `sorties/arbitrage-expert.md` (formulaire à remplir par l'expert). S'arrêter si des questions sont bloquantes.
+2. **En parallèle** :
+   - **`collecte`** → `sorties/collecte.md` (calculs de marché détaillés, sources, risques, urbanisme) ;
+   - **`visite`** → `sorties/description.md` (S2, S4, S5 rédigées à partir des notes).
+3. **`redacteur`** en mode phase 1 → `sorties/projet-rapport.md` avec page de garde, S1 à S6, mentions et clauses ; S7 et S8 en attente.
+4. Présenter à l'utilisateur : les chiffres du marché (fourchette, moyenne, médiane), les points faibles relevés, et **ce que l'expert doit décider** dans `arbitrage-expert.md`.
 
-## La chaîne
+**Arrêt. Attendre que l'expert remplisse `arbitrage-expert.md`** (si `entrees/arbitrage-expert.md` est déjà rempli, l'utiliser et le signaler).
 
-1. **Agent `mission`** → `sorties/fiche-mission.md`. S'arrêter si la fiche contient des questions bloquantes, et les poser à l'utilisateur.
-2. **Agents `collecte` et `visite`, en parallèle** → `sorties/collecte.md` et `sorties/description.md`.
-3. **Agent `redacteur`** → `sorties/projet-rapport.md`.
-4. **Agent `controleur`** → `sorties/controle.md`.
+## Phase 2 — Rédiger la valorisation et contrôler
+5. **`redacteur`** en mode phase 2 → complète S7 et S8 à partir de l'arbitrage (et la synthèse en tête si le profil de l'expert la prévoit).
+6. **`controleur`** → `sorties/controle.md`.
+7. Présenter à l'utilisateur : nombre de points bloquants / à corriger / suggestions ; les 3 à 5 points prioritaires ; rappeler que le rapport doit être relu et signé par l'expert.
 
-Indiquer à chaque agent le chemin du dossier du cas.
-
-## À la fin
-
-Présenter à l'utilisateur, en quelques lignes :
-- le type d'expertise retenu ;
-- le nombre de points ✅ / ⚠️ / ❌ du contrôle ;
-- les 3 à 5 points les plus importants à valider par l'expert.
-
-Rappeler que la valeur reste à fixer par l'expert.
+## Règles de passage
+- Indiquer à chaque agent le chemin du dossier du cas.
+- Ne jamais réécrire une sortie d'un autre agent sans le dire.
+- Tout fichier de `sorties/` peut être régénéré ; les fichiers de `entrees/` ne sont jamais modifiés.

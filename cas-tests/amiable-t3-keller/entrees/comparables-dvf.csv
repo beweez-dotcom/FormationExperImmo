@@ -1,0 +1,11 @@
+ref;adresse_approx;surface_m2;prix_total_eur;prix_m2;date;etage;etat;source
+C-01;Rue de la Roquette;64;582400;9100;2024-02;2e;Courant;DVF Etalab (état : qualification de l'expert)
+C-02;Avenue Ledru-Rollin;71;682560;9614;2024-03;4e asc;Rénové;DVF Etalab (état : qualification de l'expert)
+C-03;Rue de la Folie-Méricourt;58;513220;8849;2024-01;1er;Courant;DVF Etalab (état : qualification de l'expert)
+C-04;Rue Oberkampf;75;712500;9500;2024-04;3e asc;Rénové;DVF Etalab (état : qualification de l'expert)
+C-05;Rue Saint-Maur;62;544380;8780;2024-01;3e;Vétuste;DVF Etalab (état : qualification de l'expert)
+C-06;Rue de Charonne;69;641640;9300;2024-05;2e;Courant;DVF Etalab (état : qualification de l'expert)
+C-07;Boulevard Voltaire;80;764000;9550;2024-06;5e asc;Rénové;DVF Etalab (état : qualification de l'expert)
+C-08;Rue Keller;55;479600;8720;2024-02;2e;Vétuste;DVF Etalab (état : qualification de l'expert)
+C-09;Rue de la Croix-Faubin;67;619750;9250;2024-07;3e;Courant;DVF Etalab (état : qualification de l'expert)
+C-10;Rue Sedaine;73;694750;9517;2024-08;4e asc;Courant;DVF Etalab (état : qualification de l'expert)

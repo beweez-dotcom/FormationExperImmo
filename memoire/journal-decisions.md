@@ -25,3 +25,11 @@ Une ligne par décision : la date, ce qui a été décidé, et pourquoi.
 - **Prévoir un « profil d'expert »** (voix « je » ou impersonnelle, synthèse en tête ou non, textes généraux repris tels quels). Pourquoi : les deux experts ont le même fond mais une forme très différente.
 - **Le Contrôleur recalcule** (accès au calcul autorisé), il ne se contente pas de relire. Pourquoi : sur 3 rapports réels, une dizaine d'incohérences chiffrées, dont une valeur finale non justifiée par le calcul annoncé.
 - **Argument central de la démo** : « sur 3 rapports réels, voici ce que l'agent Contrôleur aurait relevé » (anonymisé, sans jamais nommer ni viser les experts).
+
+## 2026-10-26 — Intégration du cours et de la Charte
+
+- **Le plan suit les 8 sections de la formation**, entourées du cadre obligatoire de la Charte (ch. 10.2). Pourquoi : c'est la méthode que Rob'r enseigne ; la Charte ajoute les déclarations, clauses et réserves que les 8 sections ne couvrent pas.
+- **Chaîne en deux phases avec un formulaire d'arbitrage** rempli par l'expert (comparables, ajustements, prix unitaire, arrondi). Pourquoi : la formation pose que ces décisions ne sont pas délégables ; la Charte (ch. 6) exige le contrôle de l'expert. Remplace l'ancienne règle « conclusion laissée vide ».
+- **Les mentions IA/RGPD sont insérées telles quelles**, jamais rédigées par un agent. Pourquoi : consigne du document « Conformité de la formation à la charte ».
+- **La Charte reste hors de GitHub** et n'est jamais recopiée. Pourquoi : elle interdit sa reproduction (Titre I, 5.1).
+- **Cas de démo T3 rue Keller** créé avec des données harmonisées (libre, 14/10/2024). L'arbitrage de la formation contient un écart (−8 % ne donne pas 8 820 €/m²) : à trancher par Rob'r.

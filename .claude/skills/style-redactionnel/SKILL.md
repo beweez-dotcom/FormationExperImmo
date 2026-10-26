@@ -1,47 +1,54 @@
 ---
 name: style-redactionnel
-description: Règles de ton et de rédaction pour qu'un rapport d'expertise sonne comme écrit par un expert immobilier et non par une IA, avec les deux voix observées chez de vrais experts. À utiliser pour toute rédaction destinée au rapport.
+description: Règles de ton et de rédaction pour qu'un rapport d'expertise sonne comme écrit par un expert immobilier et non par une IA — registre amiable ou judiciaire, première personne pour les constats, formules prudentes, formules à bannir. À utiliser pour toute rédaction destinée au rapport.
 ---
 
 # Écrire comme un expert
 
-## Choisir la voix (selon le profil de l'expert)
+> Sources : la formation de Rob'r (bibliothèques de prompts, module 2) et 3 rapports réels.
 
-**Voix impersonnelle** (expert 1) : « l'Expert », « nous ».
-> « L'Expert n'a pas détecté de conflit d'intérêt lors de l'acceptation de la mission. »
-> « Nous retiendrons la méthode comparative et, en arrondissant, nous conclurons à une valeur vénale de… »
+## Règle n° 1 : la première personne pour les constats
+Chaque constat est ancré dans la visite : « j'ai constaté », « j'ai relevé », « j'ai observé ». Un contradicteur peut contester une affirmation générale, pas ce que l'expert a consigné avoir vu.
+> « J'ai constaté l'absence d'ascenseur desservant l'étage. » plutôt que « L'appartement ne bénéficie pas d'ascenseur. »
 
-**Voix à la première personne** (expert 2) : « je, soussigné… ».
-> « Je, soussigné [Expert], expert immobilier agréé, confirme m'être rendu le… »
-> « Compte tenu de l'état d'obsolescence et de vétusté constaté, il sera retenu une décote forfaitaire de 20 %. »
+Si le profil de l'expert impose la voix impersonnelle (« l'Expert a constaté »), l'appliquer partout, sans mélange.
 
-Ne jamais mélanger les deux voix dans un même rapport. Sans profil d'expert, utiliser la voix impersonnelle.
+## Le registre selon la mission
 
-## Le ton
-- Neutre, factuel, précis. On constate, on ne vend pas.
-- Distinguer ce qui est **constaté** de ce qui est **déclaré** :
-  > « Le bien est déclaré comme libre de toute occupation locative. »
-  > « Si ces éléments reposent sur des témoignages concordants et non sur un constat matériel direct, ils traduisent néanmoins une gêne réelle et récurrente. »
-- Annoncer l'incidence sur la valeur :
-  > « Ces particularités auront une incidence sur la valeur finale du bien immobilier. »
-  > « Impact des servitudes sur la valorisation : sans objet. »
-- Réserver ce qui doit l'être :
-  > « Ces informations sont données à titre indicatif, elles devront être confirmées par l'obtention d'un certificat d'urbanisme. »
-  > « Les surfaces sont données à titre indicatif et pourront être confirmées par un état de surfaces dressé par un géomètre-expert. »
+| | Amiable | Judiciaire |
+|---|---|---|
+| Ton | Sobre et professionnel, direct | Judiciaire strict, très normé |
+| S1 | « Dans le cadre d'une succession, un notaire exerçant à Paris m'a confié la mission… » | « Par ordonnance du [juridiction], l'expert soussigné a été commis… » |
+| Visite | « lors de ma visite » | « lors de mes opérations d'expertise » |
+| Fin de S6 | « Ces éléments sont pris en compte dans les ajustements de la section suivante. » | « …seront développés dans la section méthodologique. » |
+| Conclusion | **Aucune formule de certification** | Formule de certification normée, insérée telle quelle |
 
-## Formules du métier
-« sis », « ledit bien », « en son état actuel », « libre de toute occupation », « valeur vénale », « date de valeur », « donneur d'ordre », « mandant », « à titre informatif », « sous réserve des vices cachés », « pour servir et valoir ce que de droit », « l'Expert a clos le présent rapport en un original ».
+En amiable, corriger systématiquement : « l'expert soussigné a relevé » → « j'ai relevé » ; « il a été constaté que » → « j'ai constaté que » ; supprimer « conformément à ma mission judiciaire », « en foi de quoi », « certifie exact et sincère ».
 
-## À bannir : le « ton IA »
-Les rapports réels montrent que des textes d'IA collés sans relecture se repèrent :
-- Les formules creuses : « Il est important de noter que… », « En somme… », « Bien évidemment… », « Dans un monde où… ».
-- **Le texte qui commente sa propre remarque**. *Exemple réel à ne jamais reproduire : « La remarque sur la vaste terrasse exposée plein Sud est certes pertinente pour décrire les caractéristiques attractives de l'endroit, mais elle n'aura pas d'incidence directe… »*
-- Les définitions scolaires dans le corps du rapport (« L'environnement de proximité fait référence à l'environnement immédiat du bien analysé… »). Elles vont en annexe, dans les définitions de l'expert.
-- Les superlatifs publicitaires : « magnifique », « exceptionnel », « idéalement situé », « coup de cœur ». Un emplacement se qualifie avec des faits (flux, distance, visibilité).
-- Les listes à puces dans le corps du texte, sauf pour les inventaires (documents, équipements, décotes).
+## Les trois formules prudentes (section 5)
+- Origine d'un désordre : « **susceptible de résulter de** … »
+- Incertitude : « **sans examen approfondi, il n'est pas possible de** … »
+- Travaux : « **estimation indicative non contractuelle, à affiner par devis d'entreprise** »
+
+Ne jamais qualifier un désordre au-delà du visible (« structurel », « ascensionnel ») sans vérification.
+
+## Dire les points faibles sans les atténuer
+> « La salle de bains nécessite une remise en état complète » — et non « présente quelques signes de vétusté ».
+
+## Distinguer faits, déclarations et opinions
+- Constaté : « j'ai constaté… ». Déclaré : « selon les déclarations du mandant… », « le bien m'a été signalé comme… ». Pièce : « selon l'acte communiqué… ».
+- Les appréciations de valeur (« constitue un atout », « facteur favorable ») vont **uniquement** en section 7.
+
+## À bannir
+- **Ton d'annonce** : « bon standing », « finitions soignées », « idéalement situé », « ensoleillement optimal », « logement idéal », « superficie généreuse ».
+- **Vague sans chiffre** : « plusieurs chambres », « grande surface ».
+- **Formules creuses d'IA** : « Il est important de noter que », « En somme », « Bien évidemment », « constitue une qualité intrinsèque ».
+- **Texte qui commente sa propre remarque** (vu dans un rapport réel : « La remarque sur la vaste terrasse… est certes pertinente… »).
+- Définitions scolaires dans le corps du texte : elles vont en annexe.
+- Listes à puces dans la prose, sauf inventaires (pièces, ajustements, travaux).
 
 ## Usages de forme
-- Unités : m², €/m², €/m²/an ; montants avec une espace pour les milliers (590 000 €).
-- Valeur finale en chiffres **et** en lettres.
-- Dates au format jour/mois/année, cohérentes partout.
-- Arrondis annoncés (« arrondis à… ») et raisonnables.
+- m², €/m², €/m²/an ; espace pour les milliers (599 760 €).
+- Valeur finale **en chiffres et en lettres**. Règles : « six cent mille » (cent sans s devant mille), « deux cents euros », « quatre-vingts euros » mais « quatre-vingt-mille ».
+- Dates complètes et identiques partout ; arrondis annoncés (« arrondi à 600 000 € », palier fixé par l'expert).
+- Volumes cibles par section : voir `plan-rapport`.
