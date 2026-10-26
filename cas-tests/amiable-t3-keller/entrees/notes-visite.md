@@ -6,6 +6,7 @@ SITUATION : rue résidentielle calme, quartier Bastille. Métro Ledru-Rollin (L8
 IMMEUBLE : pierre de taille 1932 — immeuble de rapport 6 étages + combles — bon entretien PC — hall carrelé d'époque — ferronnerie d'origine garde-corps — cave en SS — PAS D'ASCENSEUR
 
 APPT T3 — 3e ÉTAGE SUR RUE — 68 m²
+Parquet chêne ancien, bon état, toutes pièces
 Entrée 4 m² parquet chêne ancien bon état
 Séjour 22 m² parquet moulures plafond 2 fenêtres rue DV récent
 Ch1 11 m² parquet fenêtre rue DV
