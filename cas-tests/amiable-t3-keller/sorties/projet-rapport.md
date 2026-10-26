@@ -1,10 +1,10 @@
 # Projet de rapport — T3 rue Keller, Paris 11e
 
-> **Note pour l'expert — écart de calcul maintenu (à retirer avant diffusion).**
-> Base 9 275 €/m² × (1 − 8 %) = 8 533 €/m² ; prix unitaire retenu dans l'arbitrage : 8 820 €/m² (écart de +287 €/m², soit un ajustement implicite de −4,9 %). Avec 8 533 €/m², la valeur serait de 580 244 €, arrondie à 580 000 €. La multiplication (8 820 × 68 = 599 760 €) et l'arrondi au palier de 5 000 € (600 000 €) sont exacts.
-> L'expert a maintenu son arbitrage par écrit, en connaissance de l'écart, le 26/10/2026 : les sections 7 et 8 sont rédigées avec ses valeurs.
-
-> **Tâches restantes pour l'expert** : tous les espaces réservés `[…]` ci-dessous ; points à vérifier listés dans `sorties/description.md` (superficie 57 m² détaillés pour 68 m² retenus, parquet du séjour et des chambres, cave rattachée au lot, personne ayant visité, photos) et dans `sorties/collecte.md` (source de la colonne étage, ventes de septembre-octobre 2024, zonage PLU, Géorisques).
+> **NOTE INTERNE — À RETIRER AVANT DIFFUSION**
+>
+> **Écart de calcul maintenu par l'expert.** Base 9 275 €/m² × (1 − 8 %) = 8 533 €/m² ; prix unitaire retenu dans l'arbitrage : 8 820 €/m² (écart de +287 €/m², soit un ajustement global implicite de −4,9 % au lieu de −8 %). Avec 8 533 €/m², la valeur serait de 580 244 €, arrondie à 580 000 €. La multiplication (8 820 €/m² × 68 m² = 599 760 €) et l'arrondi au palier de 5 000 € (600 000 €) sont exacts. L'expert a maintenu son arbitrage par écrit, en connaissance de l'écart, le 26/10/2026 : les sections 7 et 8 sont rédigées avec ses valeurs.
+>
+> **Tâches restantes pour l'expert** : les espaces réservés `[…]` du rapport ; points à vérifier listés dans `sorties/description.md` (superficie : 57 m² détaillés pour 68 m² retenus, cave rattachée au lot, orientation, photos) et dans `sorties/collecte.md` (source de la colonne étage, ventes de septembre-octobre 2024, zonage PLU, Géorisques).
 
 ---
 
@@ -20,9 +20,11 @@
 
 **Date de visite** : 14 octobre 2024
 **Date de valeur** : 14 octobre 2024
-**Date du rapport** : [DATE DU RAPPORT — à fournir par l'expert]
+**Date du rapport** : 26 octobre 2026
 
-[COORDONNÉES DE L'EXPERT : nom, qualité, adresse professionnelle, téléphone, courriel, références d'assurance et d'agrément]
+**Expert** : Expert de démonstration — expert en évaluation immobilière
+**Cabinet** : Cabinet de démonstration, Paris
+**Coordonnées** : [coordonnées non reproduites — dossier de démonstration]
 
 ---
 
@@ -63,17 +65,19 @@ Dans le cadre d'une succession, un notaire exerçant à Paris m'a confié la mis
 
 **Finalité du rapport** : détermination de la valeur vénale du bien dans le cadre du règlement d'une succession.
 
-**Absence de conflit d'intérêts** : [TEXTE STANDARD DE L'EXPERT : déclaration d'absence de conflit d'intérêts]
+**Indépendance et conflit d'intérêts** — Je déclare n'avoir aucun lien personnel, familial, professionnel ou financier avec le mandant, les ayants droit ou le bien expertisé, et n'avoir identifié aucune situation de conflit d'intérêts lors de l'acceptation de la mission. Je m'engage à signaler sans délai toute situation de cette nature qui apparaîtrait ultérieurement.
 
-**Compétence et indépendance** : [TEXTE STANDARD DE L'EXPERT : déclaration de compétence et d'indépendance]
+**Compétence et assurance** — J'exerce l'évaluation immobilière à titre professionnel et dispose des compétences nécessaires à l'accomplissement de la présente mission. Je suis titulaire d'une assurance de responsabilité civile professionnelle couvrant cette activité.
 
-**Référentiel** : [TEXTE STANDARD DE L'EXPERT : déclaration de conformité à la Charte de l'expertise en évaluation immobilière, 6e édition (novembre 2025)]
+**Référentiel** — Le présent rapport a été établi conformément aux principes de la Charte de l'expertise en évaluation immobilière, 6e édition (novembre 2025). La Charte est protégée par les droits de propriété intellectuelle de nature patrimoniale au profit du Comité d'application de la Charte de l'expertise en évaluation immobilière.
 
-**Type de valeur et hypothèses** : valeur vénale, bien libre de toute occupation. [TEXTE STANDARD DE L'EXPERT : définition de la valeur vénale et hypothèses retenues]
+**Visite et dates** — J'ai procédé personnellement à la visite du bien. Le rapport précise la date de visite, la date de valeur et la date de sa rédaction.
 
-**Personne ayant visité** : [À CONFIRMER PAR L'EXPERT : visite effectuée par l'expert lui-même]
+**Dates** : visite le 14 octobre 2024, de 10 h 30 à 11 h 45 ; valeur au 14 octobre 2024 ; rédaction le 26 octobre 2026.
 
-**Dates** : visite le 14 octobre 2024, de 10 h 30 à 11 h 45 ; valeur au 14 octobre 2024 ; rédaction le [DATE DU RAPPORT — à fournir par l'expert].
+**Type de valeur** : valeur vénale, bien libre de toute occupation.
+
+**Valeur et fiscalité** — La valeur vénale est exprimée hors droits et hors frais de mutation. S'agissant d'un logement achevé depuis plus de cinq ans, le bien est supposé relever du régime des droits d'enregistrement.
 
 **Mention relative à l'utilisation d'outils d'intelligence artificielle et à la protection des données**
 
@@ -89,9 +93,9 @@ Cette mention est portée à la connaissance du mandant conformément aux dispos
 
 ## 2. Situation géographique et environnement
 
-Le bien est situé rue Keller, dans le 11e arrondissement de Paris, au sein du quartier Bastille. Lors de ma visite du 14 octobre 2024, de 10 h 30 à 11 h 45, j'ai constaté que la rue Keller est une rue résidentielle et calme. L'appartement occupe le 3e étage, côté rue, d'un immeuble de rapport décrit à la section suivante.
+Le bien est situé rue Keller, dans le 11e arrondissement de Paris, au sein du quartier Bastille. Lors de ma visite du 14 octobre 2024, de 10 h 30 à 11 h 45, j'ai constaté que la rue Keller est une rue résidentielle et calme. L'appartement occupe le 3e étage d'un immeuble de rapport en pierre de taille construit en 1932 ; le séjour et la première chambre donnent sur la rue, la seconde chambre et la cuisine sur la cour.
 
-Dans l'environnement immédiat, j'ai relevé la présence de commerces rue de la Roquette, à environ 200 m du bien. La desserte en transports en commun est assurée par la station de métro Ledru-Rollin (ligne 8), à 6 minutes à pied, et par la station Bastille (lignes 1, 5 et 8), à 8 minutes à pied. Je n'ai constaté, lors de ma visite, aucune nuisance sonore, olfactive ou visuelle particulière.
+Dans l'environnement immédiat, j'ai relevé la présence de commerces rue de la Roquette, à environ 200 m du bien. La desserte en transports en commun est assurée par la station de métro Ledru-Rollin (ligne 8), située à 6 minutes à pied, et par la station Bastille (lignes 1, 5 et 8), située à 8 minutes à pied. Je n'ai constaté, lors de ma visite, aucune nuisance sonore, olfactive ou visuelle particulière.
 
 ---
 
@@ -99,7 +103,7 @@ Dans l'environnement immédiat, j'ai relevé la présence de commerces rue de la
 
 Selon l'acte de propriété de 2009 qui m'a été communiqué, le bien est détenu en pleine propriété ; il relève aujourd'hui d'une indivision successorale, dont les quotes-parts ne font pas l'objet de la mission. L'état hypothécaire n'a pas été communiqué à l'expert : je ne peux me prononcer sur d'éventuelles inscriptions.
 
-L'appartement constitue un lot d'une copropriété de 12 lots, régie par un règlement de copropriété qui m'a été communiqué. Sa quote-part est de 187/10 000 tantièmes et les charges annuelles s'élèvent à 2 200 € selon le relevé communiqué. Les procès-verbaux d'assemblée générale de 2022 et 2023 ne font apparaître aucun travaux voté. Le procès-verbal de 2024, la fiche synthétique de la copropriété et le pré-état daté n'ont pas été communiqués à l'expert ; le montant du fonds de travaux et l'existence d'éventuels impayés ne sont donc pas connus.
+L'appartement constitue un lot d'une copropriété de 12 lots, régie par le règlement de copropriété communiqué. Sa quote-part est de 187/10 000 tantièmes et les charges annuelles s'élèvent à 2 200 € selon le relevé communiqué. Les procès-verbaux d'assemblée générale de 2022 et 2023 ne font apparaître aucuns travaux votés. Le procès-verbal de 2024, la fiche synthétique de la copropriété et le pré-état daté n'ont pas été communiqués à l'expert ; le montant du fonds de travaux et l'existence d'éventuels impayés ne sont donc pas connus.
 
 Selon les pièces communiquées, le bien est situé en zone UP du plan local d'urbanisme de Paris [À VÉRIFIER PAR L'EXPERT sur le Géoportail de l'urbanisme : zonage applicable au 14 octobre 2024]. Aucune servitude n'a été portée à ma connaissance. Le diagnostic de performance énergétique classe le logement en étiquette E (265 kWh/m²/an), GES E, et le diagnostic amiante est négatif. Les diagnostics électricité, gaz et plomb, l'état des risques et le certificat de mesurage loi Carrez n'ont pas été communiqués à l'expert.
 
@@ -107,9 +111,9 @@ Selon les pièces communiquées, le bien est situé en zone UP du plan local d'u
 
 ## 4. Description physique du bien
 
-L'appartement est situé au 3e étage, sur rue, d'un immeuble de rapport construit en 1932 en pierre de taille, élevé de 6 étages plus combles, avec caves en sous-sol. J'ai constaté que l'immeuble n'est pas desservi par un ascenseur. J'ai relevé un bon entretien des parties communes, un hall carrelé d'époque et des garde-corps en ferronnerie d'origine. Il s'agit d'un appartement de type T3, dont je retiens la superficie à 68 m². Le détail des pièces que j'ai relevées totalise 57 m² ; le certificat de mesurage loi Carrez reste à produire.
+L'appartement est situé au 3e étage, sur rue, d'un immeuble de rapport construit en 1932 en pierre de taille, élevé de 6 étages plus combles, avec caves en sous-sol. J'ai constaté que l'immeuble n'est pas desservi par un ascenseur. J'ai relevé un bon entretien des parties communes, un hall carrelé d'époque et des garde-corps en ferronnerie d'origine. L'appartement, de type T3, est retenu pour une superficie de 68 m². Le détail des pièces relevées totalise 57 m² ; un certificat de mesurage loi Carrez reste à produire.
 
-La distribution est la suivante : une entrée de 4 m², revêtue d'un parquet en chêne ancien que j'ai constaté en bon état ; un séjour de 22 m² sur rue, avec parquet et moulures au plafond, éclairé par deux fenêtres équipées d'un double vitrage récent ; une première chambre de 11 m² sur rue, avec parquet et fenêtre en double vitrage ; une seconde chambre de 9 m² sur cour, avec parquet, dont la fenêtre est en simple vitrage d'origine ; une cuisine séparée de 5 m² sur cour, avec carrelage des années 1970, cuisinière indépendante sans hotte et fenêtre en simple vitrage ; une salle de bains de 4 m² équipée d'une baignoire en fonte ancienne, sans VMC, dont la fenêtre est obturée ; un WC séparé de 2 m². Le chauffage est individuel au gaz, assuré par une chaudière murale de 2009 que j'ai constatée en fonctionnement.
+La distribution est la suivante : une entrée de 4 m² ; un séjour de 22 m² sur rue, avec moulures au plafond, éclairé par deux fenêtres en double vitrage récent ; une première chambre de 11 m² sur rue, avec fenêtre en double vitrage ; une seconde chambre de 9 m² sur cour, dont la fenêtre est en simple vitrage d'origine ; une cuisine séparée de 5 m² sur cour, avec carrelage des années 1970, cuisinière indépendante sans hotte et fenêtre en simple vitrage ; une salle de bains de 4 m² équipée d'une baignoire en fonte ancienne, sans VMC, dont la fenêtre est obturée ; un WC séparé de 2 m². J'ai constaté un parquet en chêne ancien, en bon état, dans l'entrée, le séjour et les deux chambres. Le chauffage est individuel au gaz, assuré par une chaudière murale de 2009 que j'ai constatée en fonctionnement.
 
 ---
 
@@ -117,7 +121,7 @@ La distribution est la suivante : une entrée de 4 m², revêtue d'un parquet en
 
 J'ai qualifié l'état général de l'appartement de courant. Je n'ai constaté aucun désordre structurel ; sans examen approfondi, il n'est pas possible de me prononcer au-delà des éléments visibles lors de ma visite.
 
-J'ai constaté le bon état du parquet en chêne ancien de l'entrée, la présence de double vitrage sur les fenêtres côté rue (séjour, où il est récent, et première chambre) et le fonctionnement de la chaudière murale de 2009. Les parties communes sont en bon entretien et le WC séparé est dans un état correct.
+J'ai constaté le bon état du parquet en chêne ancien de l'entrée, du séjour et des deux chambres, la présence de double vitrage sur les fenêtres côté rue (séjour, où il est récent, et première chambre) et le fonctionnement de la chaudière murale de 2009. Les parties communes sont en bon entretien et le WC séparé est dans un état correct.
 
 La salle de bains nécessite une remise en état complète : j'ai relevé une baignoire en fonte ancienne, une robinetterie hors service, un carrelage décollé par endroits, l'absence de VMC et une fenêtre obturée. Sans examen approfondi, il n'est pas possible de déterminer l'origine du décollement du carrelage. Les équipements de la cuisine sont vétustes : cuisinière indépendante, absence de hotte, carrelage des années 1970. La seconde chambre et la cuisine conservent un simple vitrage d'origine, à remplacer. L'appartement est situé au 3e étage d'un immeuble sans ascenseur. Le diagnostic de performance énergétique communiqué classe le logement en étiquette E (265 kWh/m²/an).
 
@@ -148,7 +152,7 @@ J'ai constaté que l'appartement expertisé se trouve dans un état général co
 
 | | Éléments |
 |---|---|
-| **Forces** | Rue résidentielle calme, aucune nuisance constatée. Métro Ledru-Rollin (ligne 8) à 6 minutes à pied, Bastille (lignes 1, 5, 8) à 8 minutes ; commerces rue de la Roquette à environ 200 m. Immeuble de rapport de 1932 en pierre de taille, parties communes en bon entretien, hall et ferronneries d'origine. Parquet en chêne ancien en bon état dans l'entrée, moulures au plafond du séjour, double vitrage côté rue (séjour, première chambre). Chauffage individuel gaz en fonctionnement. Aucun désordre structurel constaté ; aucun travaux voté en assemblée générale en 2022 et 2023. Bien libre. |
+| **Forces** | Rue résidentielle calme, aucune nuisance constatée. Métro Ledru-Rollin (ligne 8) à 6 minutes à pied, Bastille (lignes 1, 5, 8) à 8 minutes ; commerces rue de la Roquette à environ 200 m. Immeuble de rapport de 1932 en pierre de taille, parties communes en bon entretien, hall et ferronneries d'origine. Parquet en chêne ancien en bon état dans l'entrée, le séjour et les deux chambres ; moulures au plafond du séjour ; double vitrage côté rue (séjour, première chambre). Chauffage individuel gaz en fonctionnement. Aucun désordre structurel constaté ; aucuns travaux votés en assemblée générale en 2022 et 2023. Bien libre. |
 | **Faiblesses** | 3e étage sans ascenseur. Salle de bains à remettre entièrement en état (8 000 à 14 000 €, estimation indicative). Cuisine de 5 m² aux équipements vétustes, sans hotte (5 000 à 9 000 €, estimation indicative). Simple vitrage d'origine en seconde chambre et cuisine (2 000 à 3 500 €, estimation indicative). DPE étiquette E (265 kWh/m²/an), GES E. Charges de copropriété de 2 200 €/an. |
 | **Opportunités** | Dans l'échantillon, les biens rénovés se sont vendus entre 9 500 et 9 614 €/m², au-dessus du segment courant ; les travaux identifiés portent sur des postes localisés (salle de bains, cuisine, deux fenêtres). Bien libre, disponible immédiatement. Petite copropriété de 12 lots sans travaux votés en 2022 et 2023. |
 | **Risques** | Étiquette E : calendrier d'interdiction progressive de mise en location des logements les plus énergivores (loi Climat et résilience du 22 août 2021) [À CONFIRMER PAR L'EXPERT : échéance applicable à l'étiquette E]. PV d'assemblée générale 2024, fiche synthétique et pré-état daté non communiqués. Diagnostics électricité, gaz, plomb et état des risques non communiqués. Superficie de 68 m² retenue sans certificat de mesurage loi Carrez ; les pièces relevées totalisent 57 m². Zonage PLU à confirmer à la date de valeur. État hypothécaire non communiqué. |
@@ -160,42 +164,53 @@ J'ai constaté que l'appartement expertisé se trouve dans un état général co
 J'ai retenu la méthode par comparaison directe : l'appartement relève du marché des logements anciens du 11e arrondissement, pour lequel je dispose de dix ventes intervenues entre janvier et août 2024, analysées en section 6. J'ai écarté la méthode par capitalisation du revenu, le bien n'étant pas un bien locatif, et la méthode par le coût de remplacement, s'agissant d'un appartement situé dans un immeuble ancien de 1932 pour lequel un marché de comparables est disponible.
 
 J'ai pris pour base la médiane des dix ventes retenues (C-01 à C-10), soit 9 275 €/m², et j'ai arrêté les ajustements suivants :
-- −3 % : 3e étage sans ascenseur, constaté en section 4 ;
-- −4 % : salle de bains nécessitant une remise en état complète, constatée en section 5 ;
-- −2 % : double vitrage partiel, la seconde chambre et la cuisine conservant un simple vitrage d'origine (section 5) ;
-- +1 % : parquet en chêne ancien en bon état, constaté en section 4.
+- −3 % : 3e étage sans ascenseur (section 4 : « J'ai constaté que l'immeuble n'est pas desservi par un ascenseur. ») ;
+- −4 % : salle de bains (section 5 : « La salle de bains nécessite une remise en état complète ») ;
+- −2 % : double vitrage partiel (section 5 : « La seconde chambre et la cuisine conservent un simple vitrage d'origine, à remplacer. ») ;
+- +1 % : parquet (section 4 : « J'ai constaté un parquet en chêne ancien, en bon état, dans l'entrée, le séjour et les deux chambres. »).
 
 Je n'ai pas retenu d'ajustement propre pour les équipements vétustes de la cuisine ni pour l'étiquette énergétique E, décrits en section 5 [MOTIF À PRÉCISER PAR L'EXPERT].
 
-Au terme de cette analyse, je retiens un prix unitaire de 8 820 €/m². Appliqué à la superficie de 68 m² que je retiens, dans l'attente du certificat de mesurage loi Carrez, il conduit au calcul suivant : 8 820 €/m² × 68 m² = 599 760 €, soit une valeur avant arrondi de cinq cent quatre-vingt-dix-neuf mille sept cent soixante euros.
+Je retiens un prix unitaire de 8 820 €/m². Appliqué à la superficie de 68 m² que je retiens, dans l'attente du certificat de mesurage loi Carrez, il conduit au calcul suivant : 8 820 €/m² × 68 m² = 599 760 €, soit une valeur avant arrondi de cinq cent quatre-vingt-dix-neuf mille sept cent soixante euros.
 
 ---
 
 ## 8. Conclusion — valeur vénale
 
-Au terme de mes constatations et de l'analyse qui précède, j'estime la valeur vénale de l'appartement de type T3 situé au 3e étage d'un immeuble rue Keller, Paris 11e, libre de toute occupation, à la date du 14 octobre 2024, à **600 000 € (six cent mille euros)** [À CONFIRMER PAR L'EXPERT : hors droits et frais, régime fiscal retenu], valeur arrondie au palier de 5 000 €. Aucune réserve particulière. Cette valeur peut servir de base à l'établissement de la déclaration de succession.
+Au terme de mes constatations et de l'analyse qui précède, j'estime la valeur vénale de l'appartement de type T3 situé au 3e étage d'un immeuble rue Keller, Paris 11e, libre de toute occupation, à la date du 14 octobre 2024, à **600 000 € (six cent mille euros)**, hors droits et hors frais de mutation, valeur arrondie au palier de 5 000 €. Aucune réserve particulière. Cette valeur peut servir de base à l'établissement de la déclaration de succession.
 
 ---
 
 ## Réserves et clauses
 
-**Utilisation partielle interdite** : [TEXTE STANDARD DE L'EXPERT : interdiction de toute utilisation partielle du rapport]
+**Utilisation partielle interdite** — Le présent rapport forme un tout. Il ne peut être utilisé de façon partielle, en isolant tout ou partie de son contenu de son contexte, des hypothèses retenues et des réserves exprimées.
 
-**Usage limité à la finalité** : [TEXTE STANDARD DE L'EXPERT : usage limité au règlement de la succession, secret professionnel, aucune communication à des tiers sans accord du mandant]
+**Usage limité à la finalité** — Le présent rapport est établi à l'usage exclusif du mandant, pour la seule finalité indiquée dans le cadre de la mission. Il ne peut être communiqué à des tiers sans l'accord du mandant, ni cité ou publié, en tout ou partie, sans l'accord écrit de l'expert.
 
-**Limites de la mission** : [TEXTE STANDARD DE L'EXPERT : examen visuel sans sondage ni démontage, absence de diagnostic technique, données fournies par le mandant non vérifiées]
+**Interventions antérieures** — Je ne suis pas intervenu antérieurement sur ce bien.
+
+**Documents** — Les documents communiqués par le mandant sont présumés exacts et complets. Les éléments dont l'absence est signalée dans le rapport n'ont pas pu être analysés.
+
+**Surfaces** — Les surfaces mentionnées sont celles communiquées ou relevées lors de la visite ; elles n'ont pas valeur de certificat de mesurage.
+
+**Investigations techniques** — La mission ne comporte ni vérification de la structure, ni contrôle du fonctionnement des équipements, ni recherche de vices cachés, ni diagnostic de pollution ou de matériaux dangereux. Les constats portent sur les seules parties visibles et accessibles lors de la visite.
+
+**Situation juridique et urbanisme** — La mission ne comporte pas de vérification des titres de propriété ni de l'état hypothécaire. Les informations d'urbanisme sont données sous réserve de confirmation par un certificat d'urbanisme.
+
+**Validité** — La valeur est déterminée à la date de valeur indiquée, en fonction des éléments connus à cette date. Elle ne préjuge pas de l'évolution ultérieure du marché.
 
 **Pièces non communiquées** : certificat de mesurage loi Carrez, état hypothécaire, procès-verbal d'assemblée générale 2024, fiche synthétique de la copropriété et pré-état daté, diagnostics électricité, gaz et plomb, état des risques. [IMPACT SUR LA VALEUR À APPRÉCIER PAR L'EXPERT]
-
-**Interventions antérieures sur le bien** : [NOMBRE D'INTERVENTIONS CONSÉCUTIVES — à fournir par l'expert]
 
 ---
 
 ## Clôture
 
-Fait à [LIEU — à fournir par l'expert], le [DATE DU RAPPORT — à fournir par l'expert].
+Fait à Paris, le 26 octobre 2026.
 
 Le présent rapport comporte [NOMBRE DE PAGES] pages, annexes comprises.
+
+Expert de démonstration — expert en évaluation immobilière
+Cabinet de démonstration, Paris
 
 [SIGNATURE DE L'EXPERT]
 
