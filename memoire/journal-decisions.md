@@ -33,3 +33,9 @@ Une ligne par décision : la date, ce qui a été décidé, et pourquoi.
 - **Les mentions IA/RGPD sont insérées telles quelles**, jamais rédigées par un agent. Pourquoi : consigne du document « Conformité de la formation à la charte ».
 - **La Charte reste hors de GitHub** et n'est jamais recopiée. Pourquoi : elle interdit sa reproduction (Titre I, 5.1).
 - **Cas de démo T3 rue Keller** créé avec des données harmonisées (libre, 14/10/2024). L'arbitrage de la formation contient un écart (−8 % ne donne pas 8 820 €/m²) : à trancher par Rob'r.
+
+## 2026-10-26 — Premier essai complet de la chaîne (cas rue Keller)
+
+- **Arbitrage de la démo : Rob'r garde ses ajustements (−8 %) ET 600 000 € (8 820 €/m²)**, donc l'écart reste volontairement. Pourquoi : montrer en direct que l'équipe le détecte. Décision prise en conversation le 26/10/2026.
+- **Résultat** : le Rédacteur a refusé d'écrire S7/S8 tant que l'expert n'avait pas confirmé (garde-fou validé), puis le Contrôleur a classé l'écart en point bloquant. Le Contrôleur relève aussi que la confirmation de l'expert n'est tracée nulle part dans le dossier : à l'avenir, l'expert la note dans `arbitrage-expert.md`.
+- **Nouvelle anomalie trouvée par l'agent Mission** : la somme des pièces des notes de visite fait 57 m², pour 68 m² annoncés (cours). À trancher par Rob'r.
