@@ -39,3 +39,13 @@ Une ligne par décision : la date, ce qui a été décidé, et pourquoi.
 - **Arbitrage de la démo : Rob'r garde ses ajustements (−8 %) ET 600 000 € (8 820 €/m²)**, donc l'écart reste volontairement. Pourquoi : montrer en direct que l'équipe le détecte. Décision prise en conversation le 26/10/2026.
 - **Résultat** : le Rédacteur a refusé d'écrire S7/S8 tant que l'expert n'avait pas confirmé (garde-fou validé), puis le Contrôleur a classé l'écart en point bloquant. Le Contrôleur relève aussi que la confirmation de l'expert n'est tracée nulle part dans le dossier : à l'avenir, l'expert la note dans `arbitrage-expert.md`.
 - **Nouvelle anomalie trouvée par l'agent Mission** : la somme des pièces des notes de visite fait 57 m², pour 68 m² annoncés (cours). À trancher par Rob'r.
+
+## 2026-10-26 — Décisions de Rob'r sur le cas rue Keller (second essai)
+
+- Surface retenue : **68 m²** (somme des pièces relevées : 57 m² ; certificat Carrez à produire).
+- État général : **courant**.
+- Cuisine et DPE E : **pas d'ajustement propre**.
+- Mention IA/RGPD amiable : **« rapport d'expertise »** au lieu de « avis de valeur » (skill `deontologie-rgpd` mise à jour).
+- Conclusion : **« Aucune réserve particulière » maintenu**.
+- Écart 8 533 / 8 820 €/m² : confirmation écrite de l'expert ajoutée dans `entrees/arbitrage-expert.md` ; le Rédacteur l'accepte désormais (exception ajoutée à sa règle).
+- Second essai : chaîne complète sans intervention ; le Contrôleur relève 3 bloquants, 11 à corriger, 11 suggestions, 26 espaces réservés.
