@@ -17,6 +17,7 @@ WC séparé 2 m² correct
 DPE E 265 kWh/m²/an
 Chauffage individuel gaz — chaudière murale 2009, fonctionne
 Aucun désordre structurel constaté.
+ÉTAT GÉNÉRAL : courant
 
 TRAVAUX (mes estimations indicatives) :
 - réfection SDB 8 000 – 14 000 €

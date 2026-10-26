@@ -38,7 +38,7 @@ Ces mentions sont des textes de l'expert. **Aucun agent ne les rédige ni ne les
 ### Version amiable
 **Mention relative à l'utilisation d'outils d'intelligence artificielle et à la protection des données**
 
-Le présent avis de valeur a été rédigé avec le concours d'outils d'intelligence artificielle utilisés comme aide à la rédaction et à la structuration du document. Ces outils ont été employés exclusivement pour des tâches de mise en forme, de synthèse et de formulation, sur la base de données fournies et validées par l'expert.
+Le présent rapport d'expertise a été rédigé avec le concours d'outils d'intelligence artificielle utilisés comme aide à la rédaction et à la structuration du document. Ces outils ont été employés exclusivement pour des tâches de mise en forme, de synthèse et de formulation, sur la base de données fournies et validées par l'expert.
 
 Aucune donnée à caractère personnel permettant l'identification directe du mandant, du propriétaire ou des parties concernées n'a été saisie dans ces outils. Les informations utilisées ont été préalablement anonymisées conformément aux dispositions du Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679).
 
@@ -46,7 +46,7 @@ L'ensemble des constats, des données de marché, des ajustements de valeur et d
 
 Cette mention est portée à la connaissance du mandant conformément aux dispositions du Chapitre 6 de la Charte de l'Expertise en Évaluation Immobilière (6e édition, novembre 2025).
 
-> ⚠️ Pour une expertise avec visite, Rob'r doit décider s'il remplace « Le présent avis de valeur » par « Le présent rapport d'expertise » (voir ci-dessous). Ne pas modifier sans sa validation.
+> Version validée par Rob'r le 26/10/2026 : « rapport d'expertise » remplace « avis de valeur » (pour la Charte, l'avis de valeur est un produit distinct).
 
 ### Version judiciaire
 **Mention relative à l'utilisation d'outils d'intelligence artificielle et à la protection des données**
