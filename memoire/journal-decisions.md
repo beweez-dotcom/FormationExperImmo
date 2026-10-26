@@ -49,3 +49,10 @@ Une ligne par décision : la date, ce qui a été décidé, et pourquoi.
 - Conclusion : **« Aucune réserve particulière » maintenu**.
 - Écart 8 533 / 8 820 €/m² : confirmation écrite de l'expert ajoutée dans `entrees/arbitrage-expert.md` ; le Rédacteur l'accepte désormais (exception ajoutée à sa règle).
 - Second essai : chaîne complète sans intervention ; le Contrôleur relève 3 bloquants, 11 à corriger, 11 suggestions, 26 espaces réservés.
+
+## 2026-10-26 — Troisième essai (cas rue Keller)
+
+- Notes de visite complétées par Rob'r : « parquet chêne ancien, bon état, toutes pièces » (les agents l'appliquent aux pièces sèches, cuisine et SDB étant carrelées).
+- Date du rapport : 26 octobre 2026 (choix de Rob'r ; la date de valeur reste le 14/10/2024).
+- **Profil d'expert de démonstration** (`entrees/profil-expert.md`) : identité fictive, sans coordonnées ni numéros ; textes standard (déclarations, clauses, réserves) rédigés à partir de la Charte et des pratiques observées, sans copie. À remplacer par les textes d'un expert réel.
+- Résultat : 3 bloquants, 11 à corriger, 10 suggestions, 12 espaces réservés. Nouveau point du Contrôleur : 8 820 €/m² place le bien sous toutes les ventes « courantes », risque de double comptage des ajustements sur une médiane qui inclut déjà des biens vétustes et sans ascenseur.
