@@ -2,3 +2,7 @@ desktop.ini
 Thumbs.db
 ~$*
 *.tmp
+
+# Les rapports originaux (non anonymisés) ne doivent jamais être envoyés sur GitHub
+sources/rapports-anonymises/0*-Rapport*
+*ORIGINAL*

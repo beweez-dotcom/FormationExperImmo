@@ -1,6 +1,6 @@
 # État d'avancement
 
-Dernière mise à jour : 2026-10-26
+Dernière mise à jour : 2026-10-26 (soir)
 
 ## Où on en est
 
@@ -11,7 +11,7 @@ Le squelette du projet est créé : mémoire, 5 agents, 6 skills, dossiers. Les 
 | Phase | Statut |
 |---|---|
 | 0. Squelette du projet | Fait |
-| 1. Cadrage métier : analyser les 3 rapports, établir le plan type et ses variantes | À faire, en attente des rapports |
+| 1. Cadrage métier : analyser les 3 rapports, établir le plan type et ses variantes | En cours : rapports anonymisés, analyse à faire |
 | 2. Compléter les agents et les skills avec le contenu réel | À faire |
 | 3. Tester la chaîne sur un cas (amiable, T3 rue Keller) et comparer avec un rapport réel | À faire |
 | 4. Interface web de démonstration | À faire |
@@ -20,12 +20,16 @@ Le squelette du projet est créé : mémoire, 5 agents, 6 skills, dossiers. Les 
 
 ## Prochaines étapes
 
-1. Rob'r dépose les 3 rapports anonymisés dans `sources/rapports-anonymises/`.
+1. Rob'r déplace les 3 PDF originaux hors de ClaudeProjects (dossier non synchronisé).
 2. Rob'r dépose ses deux bibliothèques de prompts dans `sources/formation/`.
-3. Mettre en place la sauvegarde GitHub.
-4. Analyser les rapports et remplir les skills `plan-rapport`, `charte-expertise` et `style-redactionnel`.
+3. Analyser les rapports anonymisés (.md) et remplir les skills `plan-rapport`, `charte-expertise` et `style-redactionnel`.
+
+## Fait
+
+- Sauvegarde GitHub en place (dépôt privé beweez-dotcom/FormationExperImmo).
+- 3 rapports anonymisés dans `sources/rapports-anonymises/` (PDF + .md), avec `CONTROLE-ANONYMISATION.md`.
 
 ## Questions ouvertes
 
-- Quels types d'expertise couvrent les 3 rapports ?
-- Les deux experts suivent-ils le même plan, ou des plans différents ?
+- Les 3 rapports couvrent : valeur vénale (financement), valeur locative commerciale (bail), valeur vénale (succession). Aucun cas « divorce » ni « judiciaire » pour l'instant.
+- Les deux experts suivent-ils le même plan, ou des plans différents ? (à analyser)

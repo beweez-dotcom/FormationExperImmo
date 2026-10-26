@@ -11,3 +11,10 @@ Une ligne par décision : la date, ce qui a été décidé, et pourquoi.
 - **Deux temps** : d'abord mettre au point la chaîne d'agents, ensuite l'habiller d'une interface web (hébergée sur Vercel) qui montre les agents travailler. Une vidéo enregistrée servira de secours.
 - **Emplacement du projet** : `D:\Archives\ClaudeProjects\FormationExperImmo`, dans le dossier parent où Rob'r centralise tous ses projets Claude.
 - **Sauvegarde et historique** : sur GitHub (à mettre en place).
+
+## 2026-10-26 — Anonymisation des 3 rapports
+
+- **Chaque rapport existe en deux versions anonymisées** : un PDF (lecture humaine) et un fichier .md (matière pour les agents). Pourquoi : les agents travaillent mieux sur du texte, Rob'r garde la mise en page.
+- **Caviardage réel** (texte supprimé, propriétés du fichier vidées, filigrane retiré), jamais un simple cache. Pourquoi : les originaux contenaient de faux caviardages, lisibles par copier-coller.
+- **Le rapport « hôtel » (expert 2, valeur locative) ne sera pas projeté en démo publique.** Pourquoi : le bien reste reconnaissable localement, même anonymisé.
+- **Les originaux sortent du dossier ClaudeProjects** (synchronisé avec MEGA) et ne vont jamais sur GitHub.
