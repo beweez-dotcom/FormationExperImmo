@@ -20,7 +20,7 @@ nature_prix : vente (prix de vente réel : DVF, PERVAL, acte)
               inconnue (source non identifiée : à préciser par l'expert)
 Une cellule inconnue reste vide. Le programme ne complète jamais une cellule.
 """
-import argparse, csv, statistics, sys
+import argparse, csv, re, statistics, sys, unicodedata
 from datetime import date
 
 COLS = ['id', 'source', 'date_releve', 'nature_prix', 'date_ref', 'localisation', 'type_bien', 'pieces',
@@ -44,6 +44,15 @@ def mois(v):
         return int(p[0]), int(p[1])
     except (ValueError, IndexError):
         return None
+
+
+def voie(v):
+    """Forme normalisée d'une localisation, pour comparer deux sources."""
+    v = unicodedata.normalize('NFKD', (v or '').split(',')[0]).encode('ascii', 'ignore').decode().lower()
+    v = re.sub(r'[-’\']', ' ', v)
+    for a, b in ((r'\bbd\b', 'boulevard'), (r'\bav\b', 'avenue'), (r'\bst\b', 'saint'), (r'\bpl\b', 'place')):
+        v = re.sub(a, b, v)
+    return ' '.join(v.split())
 
 
 def ecart_mois(a, b):
@@ -118,6 +127,9 @@ def main():
         l['surf'], l['prix'], l['pm_f'] = num(l['surface_m2']), num(l['prix_total_eur']), num(l['prix_m2_fourni'])
         l['m'] = mois(l['date_ref'])
         l['nature'] = (l['nature_prix'] or '').strip().lower() or 'inconnue'
+        if not l['m'] and mois(l['date_releve']):
+            l['m'] = mois(l['date_releve'])
+            signal[l['id']].append(f"date de référence inconnue : date de relevé utilisée ({l['date_releve']})")
         if l['surf'] and l['prix']:
             l['pm2'] = l['prix'] / l['surf']
             if l['pm_f'] is not None and abs(l['pm_f'] - l['pm2']) > 1:
@@ -134,7 +146,7 @@ def main():
         elif dv:
             e = ecart_mois(dv, l['m'])
             if e < 0:
-                signal[l['id']].append(f"postérieure à la date de valeur ({l['date_ref']})")
+                signal[l['id']].append(f"postérieure à la date de valeur ({l['m'][0]}-{l['m'][1]:02d})")
             elif e > a.fenetre_mois:
                 signal[l['id']].append(f"hors période : {e} mois avant la date de valeur (fenêtre {a.fenetre_mois} mois)")
         if a.type and l['type_bien'].strip() and l['type_bien'].strip().lower() != a.type.lower():
@@ -148,8 +160,12 @@ def main():
         for y in lignes[i + 1:]:
             if not (x['surf'] and y['surf'] and x['prix'] and y['prix'] and x['m'] and y['m']):
                 continue
-            meme_lieu = x['localisation'].strip().lower() == y['localisation'].strip().lower() and x['localisation'].strip()
-            if x['nature'] == y['nature'] == 'vente':
+            meme_lieu = voie(x['localisation']) == voie(y['localisation']) and voie(x['localisation'])
+            natures = {x['nature'], y['nature']}
+            if natures == {'vente', 'inconnue'}:
+                if abs(x['surf'] - y['surf']) <= 1 and abs(x['prix'] / y['prix'] - 1) <= 0.01 and abs(ecart_mois(x['m'], y['m'])) <= 2:
+                    paires.append((x, y, 'même vente probable (surface, prix et date concordants' + (', même voie' if meme_lieu else '') + ') : la source inconnue reprend sans doute cette vente'))
+            elif x['nature'] == y['nature'] == 'vente':
                 if abs(x['surf'] - y['surf']) <= 1 and abs(x['prix'] / y['prix'] - 1) <= 0.01 and abs(ecart_mois(x['m'], y['m'])) <= 2:
                     paires.append((x, y, 'même vente probable (surface, prix et date concordants' + (', même voie' if meme_lieu else '') + ')'))
             elif {x['nature'], y['nature']} == {'vente', 'annonce'}:
@@ -240,9 +256,13 @@ def main():
         if len(nat) > 1:
             out.append('**Attention : la sélection mélange ventes et annonces.** Vérifier que l’arbitrage le prévoit expressément, et avec quelle décote.\n')
         table_stats('Comparables retenus par l’expert', stats(choisis), out)
+        for x, y, m in paires:
+            if x['id'] in sel and y['id'] in sel:
+                out.append(f"- **{x['id']} et {y['id']} sont tous deux retenus alors qu’ils forment un doublon probable** : la même vente serait comptée deux fois.")
         for l in choisis:
-            if signal[l['id']]:
-                out.append(f"- {l['id']} retenu malgré : {' ; '.join(signal[l['id']])}")
+            autres = [t for t in signal[l['id']] if not t.startswith('doublon probable')]
+            if autres:
+                out.append(f"- {l['id']} retenu malgré : {' ; '.join(autres)}")
         out.append('')
 
     print('\n'.join(out))
