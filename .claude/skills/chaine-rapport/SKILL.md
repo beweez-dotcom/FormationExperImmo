@@ -9,7 +9,7 @@ description: Fait travailler toute l'équipe d'agents sur un dossier d'expertise
 
 ## Avant de commencer
 1. Dossier du cas dans `cas-tests/<nom>/` (copier `_modele-dossier/` si besoin).
-2. Vérifier dans `entrees/` : lettre de mission, liste des pièces, notes de visite, tableau des comparables. S'il manque un élément, le dire à l'utilisateur **avant** de lancer la chaîne.
+2. Vérifier dans `entrees/` : lettre de mission, liste des pièces, notes de visite, sources de comparables (tous formats, éventuellement dans `entrees/comparables/` : l'expert n'a pas à les mettre en forme). S'il manque un élément, le dire à l'utilisateur **avant** de lancer la chaîne.
 3. Vérifier qu'aucune donnée identifiante ne figure dans `entrees/` (skill `deontologie-rgpd`). Sinon, s'arrêter et le signaler.
 
 <!-- treboroduosseb-lic492459748 -->
