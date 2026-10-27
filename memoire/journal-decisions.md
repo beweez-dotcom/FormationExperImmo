@@ -65,3 +65,8 @@ Une ligne par décision : la date, ce qui a été décidé, et pourquoi.
 
 - Script de 20 minutes (+ 10 à 15 min de questions) rédigé dans un document partageable : préparation, déroulé minute par minute sur la page « Expertise augmentée », trois temps forts mot pour mot, réponses aux objections, ce qu'il ne faut pas promettre, conclusion et proposition de pilote. Pourquoi : la démo repose sur trois moments (l'expert décide, le Rédacteur refuse d'écrire, le Contrôleur trouve 3 bloquants) qu'il faut dire sans improviser.
 - Correction en direct proposée : cocher la réserve puis aligner le prix sur le calcul (8 533 €/m², 580 000 €). À valider par Rob'r. Le prix du pilote reste à compléter par Rob'r.
+
+## 2026-10-27 — Vidéo de secours
+
+- Vidéo de 4 min 25 (1920 × 1080, sous-titrée, sans son) enregistrée automatiquement sur la page « Expertise augmentée », en suivant le script. Pourquoi : pouvoir faire la démo même sans réseau, et laisser Rob'r commenter à voix haute. Conservée sur le disque, pas sur GitHub (trop lourde) ; le programme d'enregistrement est dans `app/video/` pour la refaire.
+- Correction de la page : après le blocage du Rédacteur, le bouton « Valider l'arbitrage » restait grisé ; il est de nouveau actif, ce qui permet le temps fort n° 2 du script (bloquer puis maintenir).
