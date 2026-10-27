@@ -70,3 +70,11 @@ Une ligne par décision : la date, ce qui a été décidé, et pourquoi.
 
 - Vidéo de 4 min 25 (1920 × 1080, sous-titrée, sans son) enregistrée automatiquement sur la page « Expertise augmentée », en suivant le script. Pourquoi : pouvoir faire la démo même sans réseau, et laisser Rob'r commenter à voix haute. Conservée sur le disque, pas sur GitHub (trop lourde) ; le programme d'enregistrement est dans `app/video/` pour la refaire.
 - Correction de la page : après le blocage du Rédacteur, le bouton « Valider l'arbitrage » restait grisé ; il est de nouveau actif, ce qui permet le temps fort n° 2 du script (bloquer puis maintenir).
+
+## 2026-10-27 — Comparables de sources multiples
+
+- L'expert dépose ses comparables tels quels (exports DVF, base notariale, annonces en texte ou en capture, tableaux d'origine inconnue), sans balise ni mise en forme. Pourquoi : ne pas lui ajouter de travail de saisie.
+- L'agent Collecte les ramène à un **tableau commun** (`sorties/comparables-unifies.csv`) ; un **programme de calcul** fixe (`analyse_comparables.py`) fait tous les calculs. Pourquoi : l'IA lit et range, le programme calcule, toujours de la même façon.
+- **Ventes et annonces ne sont jamais mélangées** : statistiques séparées ; toute décote de négociation est une décision de l'expert. Source inconnue exclue tant que l'expert ne l'a pas identifiée. Doublons signalés, jamais fusionnés.
+- L'arbitrage contient désormais un **tableau de sélection** (retenu / écarté + motif) que seul l'expert remplit ; en phase 2, Rédacteur et Contrôleur recalculent sur cette sélection.
+- Pas d'extraction automatique des sites d'annonces (conditions d'utilisation) : seulement les relevés de l'expert.

@@ -68,29 +68,31 @@ Total : 27 références relevées.
 | C-07 | DVF Etalab | vente | 2024-06-06 | Bd Voltaire, Paris 11e | appartement | 80,00 | 764 000 | 9 550,00 | — | aucun |
 | C-08 | DVF Etalab | vente | 2024-02-27 | Rue Keller, Paris 11e | appartement | 55,00 | 479 600 | 8 720,00 | — | aucun |
 | C-09 | DVF Etalab | vente | 2024-07-04 | Rue de la Croix Faubin, Paris 11e | appartement | 67,00 | 619 750 | 9 250,00 | — | aucun |
-| C-10 | DVF Etalab | vente | 2024-08-12 | Rue Sedaine, Paris 11e | appartement | 73,00 | 694 750 | 9 517,12 | — | aucun |
+| C-10 | DVF Etalab | vente | 2024-08-12 | Rue Sedaine, Paris 11e | appartement | 73,00 | 694 750 | 9 517,12 | — | doublon probable avec X-01 |
 | C-11 | DVF Etalab | vente | 2022-03-10 | Rue de la Roquette, Paris 11e | appartement | 66,00 | 590 000 | 8 939,39 | — | hors période : 31 mois avant la date de valeur (fenêtre 12 mois) |
 | C-12 | DVF Etalab | vente | 2024-05-23 | Rue Saint Maur, Paris 11e | maison | 95,00 | 1 050 000 | 11 052,63 | — | type de bien différent : maison |
 | C-13 | DVF Etalab | vente | 2024-06-19 | Rue Popincourt, Paris 11e | appartement | 61,00 | 268 000 | 4 393,44 | — | aucun |
-| C-14 | DVF Etalab | vente | 2024-11-20 | Rue Keller, Paris 11e | appartement | 63,00 | 600 000 | 9 523,81 | — | postérieure à la date de valeur (2024-11-20) |
+| C-14 | DVF Etalab | vente | 2024-11-20 | Rue Keller, Paris 11e | appartement | 63,00 | 600 000 | 9 523,81 | — | postérieure à la date de valeur (2024-11) ; doublon probable avec A-01 |
 | C-15 | Base notariale | vente | 2024-02-09 | Rue de la Roquette |  | 64,00 | 582 400 | 9 100,00 | Bon état (base notariale) | type de bien non indiqué ; doublon probable avec C-01 |
 | C-16 | Base notariale | vente | 2024-05-17 | Rue de Charonne |  | 69,00 | 641 640 | 9 299,13 | Courant (base notariale) | type de bien non indiqué ; doublon probable avec C-06 |
 | C-17 | Base notariale | vente | 2024-06-13 | Rue Amelot |  | 66,00 | 610 500 | 9 250,00 | Courant (base notariale) | type de bien non indiqué |
 | C-18 | Base notariale | vente | 2024-09-12 | Rue du Chemin-Vert |  | 70,00 | 637 000 | 9 100,00 | À rafraîchir (base notariale) | type de bien non indiqué |
-| A-01 | Annonce — site entre particuliers | annonce |  | Rue Keller | appartement | 63,00 | 660 000 | 10 476,19 | à rafraîchir (annonce) | date manquante |
-| A-02 | Annonce — portail immobilier | annonce |  | Rue de la Roquette | appartement | 70,00 | 735 000 | 10 500,00 | rénové (annonce) | date manquante |
-| A-03 | Annonce — portail immobilier | annonce |  | Rue Sedaine | appartement | 65,00 | 689 000 | 10 600,00 | bon état (annonce) | date manquante |
-| A-04 | Annonce — portail immobilier | annonce |  | Rue Oberkampf | appartement | 68,00 | 715 000 | 10 514,71 | bon état (annonce) | date manquante |
+| A-01 | Annonce — site entre particuliers | annonce |  | Rue Keller | appartement | 63,00 | 660 000 | 10 476,19 | à rafraîchir (annonce) | date de référence inconnue : date de relevé utilisée (2024-09-18) ; doublon probable avec C-14 |
+| A-02 | Annonce — portail immobilier | annonce |  | Rue de la Roquette | appartement | 70,00 | 735 000 | 10 500,00 | rénové (annonce) | date de référence inconnue : date de relevé utilisée (2024-09-25) |
+| A-03 | Annonce — portail immobilier | annonce |  | Rue Sedaine | appartement | 65,00 | 689 000 | 10 600,00 | bon état (annonce) | date de référence inconnue : date de relevé utilisée (2024-10-02) |
+| A-04 | Annonce — portail immobilier | annonce |  | Rue Oberkampf | appartement | 68,00 | 715 000 | 10 514,71 | bon état (annonce) | date de référence inconnue : date de relevé utilisée (2026-10-21) ; postérieure à la date de valeur (2026-10) |
 | A-05 | Annonce — capture d’écran (site non indiqué) | annonce | 2024-09-30 | Rue Saint-Ambroise, Paris 11e | appartement | 64,00 | 649 000 | 10 140,62 | à rafraîchir (annonce) | aucun |
-| X-01 | Tableau d'origine inconnue | inconnue | 2024-08-12 | Rue Sedaine |  | 73,00 | 694 750 | 9 517,12 | — | nature du prix non identifiée (vente ou annonce ?) : à préciser par l’expert ; type de bien non indiqué |
+| X-01 | Tableau d'origine inconnue | inconnue | 2024-08-12 | Rue Sedaine |  | 73,00 | 694 750 | 9 517,12 | — | nature du prix non identifiée (vente ou annonce ?) : à préciser par l’expert ; type de bien non indiqué ; doublon probable avec C-10 |
 | X-02 | Tableau d'origine inconnue | inconnue | 2024-07-05 | Passage Saint-Pierre-Amelot |  | 65,50 | 598 000 | 9 129,77 | — | nature du prix non identifiée (vente ou annonce ?) : à préciser par l’expert ; type de bien non indiqué |
 | X-03 | Tableau d'origine inconnue | inconnue | 2024-06-14 | Rue Moret |  | — | 575 000 | — | — | surface ou prix manquant : exclu des calculs ; nature du prix non identifiée (vente ou annonce ?) : à préciser par l’expert ; type de bien non indiqué |
 | X-04 | Tableau d'origine inconnue | inconnue | 2024-04-22 | Rue Godefroy-Cavaignac |  | 70,00 | 655 000 | 9 357,14 | — | nature du prix non identifiée (vente ou annonce ?) : à préciser par l’expert ; type de bien non indiqué |
 
 ### 3. Doublons probables (à confirmer par l’expert)
 
-- **C-01** (DVF Etalab) et **C-15** (Base notariale) : même vente probable (surface, prix et date concordants).
-- **C-06** (DVF Etalab) et **C-16** (Base notariale) : même vente probable (surface, prix et date concordants).
+- **C-01** (DVF Etalab) et **C-15** (Base notariale) : même vente probable (surface, prix et date concordants, même voie).
+- **C-06** (DVF Etalab) et **C-16** (Base notariale) : même vente probable (surface, prix et date concordants, même voie).
+- **C-10** (DVF Etalab) et **X-01** (Tableau d'origine inconnue) : même vente probable (surface, prix et date concordants, même voie) : la source inconnue reprend sans doute cette vente.
+- **A-01** (Annonce — site entre particuliers) et **C-14** (DVF Etalab) : l’annonce a probablement abouti à cette vente (écart prix demandé / prix de vente -9,09 %).
 
 Pour les statistiques provisoires ci-dessous, une même vente relevée deux fois n’est comptée qu’une fois (première occurrence). Les informations complémentaires de la seconde source (état, étage…) ne sont pas fusionnées sans l’accord de l’expert.
 
@@ -107,16 +109,16 @@ Pour les statistiques provisoires ci-dessous, une même vente relevée deux fois
 | Moyenne pondérée par la surface | 8 898 €/m² | 7 750 300 € ÷ 871,00 m² |
 | Médiane | 9 250 €/m² | n = 13 (impair) : valeur de rang 7 |
 
-**Annonces (prix demandés, avant négociation)** (5 références)
+**Annonces (prix demandés, avant négociation)** (4 références)
 
 | Indicateur | Valeur | Calcul |
 |---|---|---|
 | Fourchette | 10 141 – 10 600 €/m² | écart 4,53 % |
-| Moyenne arithmétique | 10 446 €/m² | somme des prix/m² ÷ 5 |
-| Moyenne pondérée par la surface | 10 448 €/m² | 3 448 000 € ÷ 330,00 m² |
-| Médiane | 10 500 €/m² | n = 5 (impair) : valeur de rang 3 |
+| Moyenne arithmétique | 10 429 €/m² | somme des prix/m² ÷ 4 |
+| Moyenne pondérée par la surface | 10 431 €/m² | 2 733 000 € ÷ 262,00 m² |
+| Médiane | 10 488 €/m² | n = 4 (pair) : moyenne des valeurs de rang 2 et 3, (10 476,19 + 10 500,00) ÷ 2 |
 
-Écart entre la médiane des prix demandés et celle des ventes : 13,51 %. Simple constat : toute décote de négociation appliquée aux annonces relève de l’expert.
+Écart entre la médiane des prix demandés et celle des ventes : 13,38 %. Simple constat : toute décote de négociation appliquée aux annonces relève de l’expert.
 
 ### 5. Valeurs atypiques parmi les ventes (filtre 60 % – 140 % de la médiane)
 
@@ -151,16 +153,11 @@ Ces ventes ne sont pas supprimées : l’expert décide.
 
 ### Signalements complémentaires de l'agent (hors programme)
 
-Le programme ne peut pas détecter les points suivants, faute de date (annonces) ou de nature de prix (source inconnue) :
-
-1. **A-04 (annonce rue Oberkampf) relevée le 21/10/2026**, deux ans après la date de valeur. Sa date de mise en ligne étant absente, le programme ne l'a pas signalée et **l'a comptée dans les statistiques des annonces**. Pour information, le même programme lancé sur A-01, A-02, A-03 et A-05 seulement (variante de contrôle, **pas une sélection**) donne : 4 annonces, fourchette 10 141 – 10 600 €/m², moyenne 10 429 €/m², moyenne pondérée 10 431 €/m² (2 733 000 € ÷ 262,00 m²), médiane 10 488 €/m² ((10 476,19 + 10 500,00) ÷ 2).
-2. **X-01 et C-10** : même voie (rue Sedaine), même date (12/08/2024), même prix (694 750 €), même surface (73 m²). Même vente probable, la source X étant de nature inconnue.
-3. **A-01 et C-14** : même voie (rue Keller), même surface (63 m²), 3 pièces. Annonce à 660 000 € relevée le 18/09/2024, vente DVF à 600 000 € le 20/11/2024 (écart −9,09 %, calculé par outil). L'annonce a pu aboutir à cette vente, elle-même postérieure à la date de valeur. Les caractéristiques de A-01 (rue Keller, 3e étage sans ascenseur, à rafraîchir, DPE E) sont proches de celles du bien expertisé, pour une surface différente (63 m² contre 68 m² annoncés et 57 m² additionnés en visite) : à vérifier par l'expert.
-4. **C-17 et C-18** (base notariale) sont comptées dans les statistiques des ventes alors que la source n'indique ni le type de bien ni le nombre de pièces.
-5. **C-13** (rue Popincourt, 4 393 €/m²) est la seule valeur atypique : elle reste dans les statistiques provisoires ci-dessus (13 ventes) ; elle n'est pas supprimée.
+1. **A-01 / C-14** (doublon détecté par le programme) : les caractéristiques de A-01 (rue Keller, 3e étage sans ascenseur, à rafraîchir, DPE E) sont proches de celles du bien expertisé, pour une surface différente (63 m² contre 68 m² annoncés et 57 m² additionnés en visite) : l'expert vérifiera s'il ne s'agit pas du bien lui-même.
+2. **C-17 et C-18** (base notariale) sont comptées dans les statistiques des ventes alors que la source n'indique ni le type de bien ni le nombre de pièces.
 
 ### Composition des statistiques provisoires des ventes (13)
-C-01 à C-10, C-13, C-17, C-18. Hors statistiques : C-11 (2022, hors période), C-12 (maison), C-14 (postérieure à la date de valeur), C-15 et C-16 (secondes occurrences de C-01 et C-06), X-01 à X-04 (source inconnue).
+C-01 à C-10, C-13, C-17, C-18. Hors statistiques : C-11 (2022, hors période), C-12 (maison), C-14 (postérieure à la date de valeur), C-15 et C-16 (secondes occurrences de C-01 et C-06), X-01 à X-04 (source inconnue). Annonces : 4 comptées (A-01, A-02, A-03, A-05) ; A-04 exclue (postérieure à la date de valeur).
 
 ### Références les plus proches du bien (constats, sans choix)
 - **Même voie** : C-08 (rue Keller, 55 m², 8 720,00 €/m², février 2024).
@@ -171,12 +168,12 @@ Le choix du comparable le plus proche revient à l'expert.
 
 ## 3. Points à trancher par l'expert
 
-1. **Doublons** : C-01 / C-15 et C-06 / C-16 (programme) ; C-10 / X-01 et A-01 / C-14 (agent). Confirmer, ou conserver séparément.
+1. **Doublons** (programme) : C-01 / C-15, C-06 / C-16, C-10 / X-01 et A-01 / C-14. Confirmer, ou conserver séparément.
 2. **Informations de la seconde source** : la base notariale apporte pour C-15 « Bon état », 2e étage, sans ascenseur, DPE D, et pour C-16 « Courant », 2e étage, sans ascenseur, DPE D, que DVF ne donne pas (C-01, C-06). X-01 porte « 4e asc ». Rien n'a été reporté sur les lignes DVF : à décider. Aucune information **contradictoire** n'a été relevée entre deux sources ; les états viennent tous de la base notariale ou des annonces, jamais de DVF.
 3. **Source inconnue** `export-tableur.csv` : origine, nature du prix (vente ou annonce), nature de la surface ; surface manquante de X-03 (« surface ? »). Valider la correspondance des colonnes ci-dessus.
-4. **Annonce A-04** : date de relevé 21/10/2026, erreur de saisie (2024 ?) ou relevé tardif. Les statistiques des annonces l'incluent.
-5. **Dates de mise en ligne** de A-01 à A-04 : non indiquées.
-6. **Usage des annonces** : écartées, éclairage seulement, ou intégrées avec une décote de négociation (choix et taux de l'expert). Le programme constate un écart de 13,51 % entre la médiane des prix demandés et celle des ventes.
+4. **Annonce A-04** : date de relevé 21/10/2026, erreur de saisie (2024 ?) ou relevé tardif. Le programme la signale postérieure à la date de valeur et l'exclut des statistiques des annonces.
+5. **Dates de mise en ligne** de A-01 à A-04 : non indiquées ; le programme utilise la date de relevé.
+6. **Usage des annonces** : écartées, éclairage seulement, ou intégrées avec une décote de négociation (choix et taux de l'expert). Le programme constate un écart de 13,38 % entre la médiane des prix demandés et celle des ventes.
 7. **C-13** (4 393 €/m², 47,50 % de la médiane) : vente atypique à vérifier (viager, lot particulier, vente entre proches ?).
 8. **C-11** (2022), **C-12** (maison), **C-14** (novembre 2024) : hors sujet, à écarter ou non.
 9. **C-17, C-18** : type de bien et nombre de pièces à confirmer.
@@ -192,7 +189,7 @@ J'ai réuni les ventes d'appartements du 11e arrondissement de Paris intervenues
 
 Sur les treize ventes ainsi retenues à ce stade, les prix s'établissent entre 4 393 et 9 614 €/m², pour une moyenne arithmétique de 8 840 €/m², une moyenne pondérée par la surface de 8 898 €/m² et une médiane de 9 250 €/m². La vente de la rue Popincourt (4 393 €/m²) se détache nettement et appelle une vérification. Les deux ventes dont l'état est connu, toutes deux sans ascenseur, ressortent à 9 250 €/m² (état courant) et 9 100 €/m² (à rafraîchir).
 
-À titre d'éclairage sur l'offre concurrente, les annonces relevées affichent des prix demandés de 10 141 à 10 600 €/m², médiane 10 500 €/m² [À CONFIRMER : inclut l'annonce A-04 relevée en 2026]. Ce sont des prix avant négociation, non des prix constatés. Au 3e étage sans ascenseur, avec salle de bains et cuisine à reprendre et une étiquette E, mais dans un immeuble en pierre de taille bien entretenu, le bien se compare davantage aux références sans ascenseur et à rafraîchir qu'aux biens rénovés. Ces éléments sont pris en compte dans les ajustements de la section suivante.
+À titre d'éclairage sur l'offre concurrente, les annonces relevées affichent des prix demandés de 10 141 à 10 600 €/m², médiane 10 488 €/m². Ce sont des prix avant négociation, non des prix constatés. Au 3e étage sans ascenseur, avec salle de bains et cuisine à reprendre et une étiquette E, mais dans un immeuble en pierre de taille bien entretenu, le bien se compare davantage aux références sans ascenseur et à rafraîchir qu'aux biens rénovés. Ces éléments sont pris en compte dans les ajustements de la section suivante.
 
 ---
 

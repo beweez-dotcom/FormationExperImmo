@@ -27,6 +27,8 @@ Le squelette du projet est créé : mémoire, 5 agents, 6 skills, dossiers. Agen
 
 ## Fait
 
+- Comparables de sources multiples (27/10) : tableau commun, programme `donnees-marche/scripts/analyse_comparables.py`, ventes et annonces séparées, doublons, sélection par l'expert dans l'arbitrage ; testé sur `cas-tests/amiable-t3-keller-multisources/` (phase 1).
+
 - Sauvegarde GitHub en place (dépôt privé beweez-dotcom/FormationExperImmo).
 - 3 rapports anonymisés dans `sources/rapports-anonymises/` (PDF + .md), avec `CONTROLE-ANONYMISATION.md`. Originaux retirés du dossier.
 - Analyse des structures : `sources/analyse-structures.md`.

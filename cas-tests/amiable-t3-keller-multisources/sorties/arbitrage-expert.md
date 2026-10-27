@@ -19,21 +19,21 @@ Expert : ______________________  Date de l'arbitrage : ____ / ____ / ________
 | C-07 | DVF Etalab | vente | 2024-06-06 | Bd Voltaire, Paris 11e | 80,00 | 9 550,00 | aucun | | |
 | C-08 | DVF Etalab | vente | 2024-02-27 | Rue Keller, Paris 11e | 55,00 | 8 720,00 | aucun | | |
 | C-09 | DVF Etalab | vente | 2024-07-04 | Rue de la Croix Faubin, Paris 11e | 67,00 | 9 250,00 | aucun | | |
-| C-10 | DVF Etalab | vente | 2024-08-12 | Rue Sedaine, Paris 11e | 73,00 | 9 517,12 | même vente probable que X-01 (source inconnue) — signalé par l'agent | | |
+| C-10 | DVF Etalab | vente | 2024-08-12 | Rue Sedaine, Paris 11e | 73,00 | 9 517,12 | doublon probable avec X-01 | | |
 | C-11 | DVF Etalab | vente | 2022-03-10 | Rue de la Roquette, Paris 11e | 66,00 | 8 939,39 | hors période : 31 mois avant la date de valeur (fenêtre 12 mois) | | |
 | C-12 | DVF Etalab | vente | 2024-05-23 | Rue Saint Maur, Paris 11e | 95,00 | 11 052,63 | type de bien différent : maison | | |
-| C-13 | DVF Etalab | vente | 2024-06-19 | Rue Popincourt, Paris 11e | 61,00 | 4 393,44 | valeur atypique : 47,50 % de la médiane (programme) | | |
-| C-14 | DVF Etalab | vente | 2024-11-20 | Rue Keller, Paris 11e | 63,00 | 9 523,81 | postérieure à la date de valeur (2024-11-20) ; même voie, même surface que A-01 (annonce 660 000 € relevée le 18/09/2024 ; écart −9,09 %) : l'annonce a pu aboutir à cette vente — signalé par l'agent | | |
+| C-13 | DVF Etalab | vente | 2024-06-19 | Rue Popincourt, Paris 11e | 61,00 | 4 393,44 | valeur atypique : 47,50 % de la médiane | | |
+| C-14 | DVF Etalab | vente | 2024-11-20 | Rue Keller, Paris 11e | 63,00 | 9 523,81 | postérieure à la date de valeur (2024-11) ; doublon probable avec A-01 | | |
 | C-15 | Base notariale | vente | 2024-02-09 | Rue de la Roquette | 64,00 | 9 100,00 | type de bien non indiqué ; doublon probable avec C-01 | | |
 | C-16 | Base notariale | vente | 2024-05-17 | Rue de Charonne | 69,00 | 9 299,13 | type de bien non indiqué ; doublon probable avec C-06 | | |
-| C-17 | Base notariale | vente | 2024-06-13 | Rue Amelot | 66,00 | 9 250,00 | type de bien non indiqué ; comptée dans les statistiques bien que le type de bien ne soit pas indiqué | | |
-| C-18 | Base notariale | vente | 2024-09-12 | Rue du Chemin-Vert | 70,00 | 9 100,00 | type de bien non indiqué ; comptée dans les statistiques bien que le type de bien ne soit pas indiqué | | |
-| A-01 | Annonce — site entre particuliers | annonce | — | Rue Keller | 63,00 | 10 476,19 | date manquante ; date de mise en ligne inconnue (relevée le 2024-09-18) ; a pu aboutir à la vente C-14 — signalé par l'agent | | |
-| A-02 | Annonce — portail immobilier | annonce | — | Rue de la Roquette | 70,00 | 10 500,00 | date manquante ; date de mise en ligne inconnue (relevée le 2024-09-25) | | |
-| A-03 | Annonce — portail immobilier | annonce | — | Rue Sedaine | 65,00 | 10 600,00 | date manquante ; date de mise en ligne inconnue (relevée le 2024-10-02) | | |
-| A-04 | Annonce — portail immobilier | annonce | — | Rue Oberkampf | 68,00 | 10 514,71 | date manquante ; relevée le 2026-10-21, deux ans après la date de valeur, mais comptée dans les statistiques des annonces faute de date de mise en ligne — signalé par l'agent | | |
+| C-17 | Base notariale | vente | 2024-06-13 | Rue Amelot | 66,00 | 9 250,00 | type de bien non indiqué | | |
+| C-18 | Base notariale | vente | 2024-09-12 | Rue du Chemin-Vert | 70,00 | 9 100,00 | type de bien non indiqué | | |
+| A-01 | Annonce — site entre particuliers | annonce | — | Rue Keller | 63,00 | 10 476,19 | date de référence inconnue : date de relevé utilisée (2024-09-18) ; doublon probable avec C-14 | | |
+| A-02 | Annonce — portail immobilier | annonce | — | Rue de la Roquette | 70,00 | 10 500,00 | date de référence inconnue : date de relevé utilisée (2024-09-25) | | |
+| A-03 | Annonce — portail immobilier | annonce | — | Rue Sedaine | 65,00 | 10 600,00 | date de référence inconnue : date de relevé utilisée (2024-10-02) | | |
+| A-04 | Annonce — portail immobilier | annonce | — | Rue Oberkampf | 68,00 | 10 514,71 | date de référence inconnue : date de relevé utilisée (2026-10-21) ; postérieure à la date de valeur (2026-10) | | |
 | A-05 | Annonce — capture d’écran (site non indiqué) | annonce | 2024-09-30 | Rue Saint-Ambroise, Paris 11e | 64,00 | 10 140,62 | aucun | | |
-| X-01 | Tableau d'origine inconnue | inconnue | 2024-08-12 | Rue Sedaine | 73,00 | 9 517,12 | nature du prix non identifiée (vente ou annonce ?) : à préciser par l’expert ; type de bien non indiqué ; même vente probable que C-10 (même voie, date, prix, surface) — signalé par l'agent | | |
+| X-01 | Tableau d'origine inconnue | inconnue | 2024-08-12 | Rue Sedaine | 73,00 | 9 517,12 | nature du prix non identifiée (vente ou annonce ?) : à préciser par l’expert ; type de bien non indiqué ; doublon probable avec C-10 | | |
 | X-02 | Tableau d'origine inconnue | inconnue | 2024-07-05 | Passage Saint-Pierre-Amelot | 65,50 | 9 129,77 | nature du prix non identifiée (vente ou annonce ?) : à préciser par l’expert ; type de bien non indiqué | | |
 | X-03 | Tableau d'origine inconnue | inconnue | 2024-06-14 | Rue Moret | — | — | surface ou prix manquant : exclu des calculs ; nature du prix non identifiée (vente ou annonce ?) : à préciser par l’expert ; type de bien non indiqué | | |
 | X-04 | Tableau d'origine inconnue | inconnue | 2024-04-22 | Rue Godefroy-Cavaignac | 70,00 | 9 357,14 | nature du prix non identifiée (vente ou annonce ?) : à préciser par l’expert ; type de bien non indiqué | | |
