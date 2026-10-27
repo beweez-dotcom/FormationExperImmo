@@ -387,7 +387,7 @@ details.full summary { cursor: pointer; font-weight: 600; }
       '<label class="check" id="maintien-wrap"><input type="checkbox" id="f-maint"' + (A.maintien ? ' checked' : '') + '> <span>Je maintiens mes valeurs en connaissance de l’écart</span></label>' +
       '<label class="check"><input type="checkbox" id="f-res"' + (A.reserve ? ' checked' : '') + '> <span>Ajouter en conclusion une réserve (certificat Carrez et pièces non communiquées)</span></label>' +
       '</div>' +
-      '<div><button class="btn expert" id="validate"' + (state.expert.s === 'wait' && !locked ? '' : ' disabled') + '>Valider l’arbitrage et lancer la phase 2</button> <button class="btn" id="restore">Revenir aux valeurs de la formation</button></div>' +
+      '<div><button class="btn expert" id="validate"' + ((state.expert.s === 'wait' || state.expert.s === 'block') && !locked ? '' : ' disabled') + '>Valider l’arbitrage et lancer la phase 2</button> <button class="btn" id="restore">Revenir aux valeurs de la formation</button></div>' +
       '</div>';
     const bind = (id, fn) => document.getElementById(id).addEventListener('input', e => { fn(e.target); updateCalc(); });
     bind('f-base', t => A.base = t.value);
