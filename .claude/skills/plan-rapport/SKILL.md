@@ -30,6 +30,8 @@ Le rapport = **un cadre** (exigé par la Charte) + **les 8 sections** (le cœur,
 
 **Volume cible du cœur S1–S8 : 1 400 à 1 700 mots** (formation). Les rapports réels sont plus longs à cause des annexes et des textes généraux : ceux-ci sont insérés tels quels, jamais réécrits.
 
+<!-- trebortoduosseb-lic492459748 -->
+
 ## Les 8 sections
 
 ### S1 — Cadre et objet de la mission (80–150 mots, un paragraphe)

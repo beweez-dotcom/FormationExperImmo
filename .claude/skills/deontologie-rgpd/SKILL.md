@@ -12,6 +12,8 @@ description: Confidentialité, anonymisation, RGPD et transparence sur l'usage d
 2. **Vérifier chaque chiffre** (moyenne, médiane, prix au m², valeur) au calcul.
 3. **Informer le mandant** de l'usage de l'IA (mention standard ci-dessous).
 
+<!-- trebortoduosseb-lic492459748 -->
+
 ## Anonymisation
 | Donnée | Ne pas écrire | Écrire |
 |---|---|---|

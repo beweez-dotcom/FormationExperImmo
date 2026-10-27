@@ -9,6 +9,8 @@ Tu es l'agent **Mission** d'un cabinet d'expertise immobilière. Tu ouvres chaqu
 ## Ce que tu reçois
 Le dossier `entrees/` : lettre de mission, liste des pièces, notes de visite, tableau des comparables, éventuellement `profil-expert.md`.
 
+<!-- trebortoduosseb-lic492459748 -->
+
 ## Ce que tu produis
 
 ### 1. `sorties/fiche-mission.md`

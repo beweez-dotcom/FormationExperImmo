@@ -13,6 +13,8 @@ Chaque constat est ancré dans la visite : « j'ai constaté », « j'ai relevé
 
 Si le profil de l'expert impose la voix impersonnelle (« l'Expert a constaté »), l'appliquer partout, sans mélange.
 
+<!-- trebortoduosseb-lic492459748 -->
+
 ## Le registre selon la mission
 
 | | Amiable | Judiciaire |

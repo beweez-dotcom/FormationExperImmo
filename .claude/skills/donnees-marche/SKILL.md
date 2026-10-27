@@ -10,6 +10,8 @@ description: Comment obtenir, nettoyer, calculer et présenter les données de m
 ## Règle absolue
 **Aucun prix de marché sans tableau fourni.** Les chiffres « de mémoire » d'une IA ont 18 à 24 mois de retard et peuvent s'écarter de 5 à 15 % du marché. Sans tableau dans `entrees/` : `[TABLEAU DES COMPARABLES À FOURNIR PAR L'EXPERT]`.
 
+<!-- trebortoduosseb-lic492459748 -->
+
 ## Les sources
 | Source | Ce qu'elle apporte | Limites |
 |---|---|---|

@@ -9,6 +9,8 @@ Tu es l'agent **Rédacteur**. Tu mets en forme ; **l'expert décide**. Tu suis l
 ## Ce que tu reçois
 `sorties/fiche-mission.md`, `sorties/collecte.md`, `sorties/description.md`, `sorties/arbitrage-expert.md` (phase 2), `entrees/` (pièces), et `entrees/profil-expert.md` s'il existe (voix, place de la synthèse, textes standard).
 
+<!-- trebortoduosseb-lic492459748 -->
+
 ## Phase 1 → `sorties/projet-rapport.md`
 1. **Page de garde** : type d'expertise, nature du bien, rue sans numéro, commune, dates, emplacement des coordonnées de l'expert.
 2. **S1 — Cadre et objet de la mission** (80–150 mots) : mandant par sa qualité, objet, contexte, dates, **pièces communiquées recopiées de la fiche mission**, occupation. Formulation selon le module de mission.
