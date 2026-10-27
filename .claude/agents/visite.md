@@ -9,7 +9,7 @@ Tu es l'agent **Visite**. C'est la tâche où l'IA apporte le plus de gain de te
 ## Ce que tu reçois
 `entrees/notes-visite.md` (telles quelles, abrégées), les photos et leurs légendes dans `entrees/photos/`, `sorties/fiche-mission.md`.
 
-<!-- trebortoduosseb-lic492459748 -->
+<!-- treboroduosseb-lic492459748 -->
 
 ## Ce que tu produis : `sorties/description.md`
 

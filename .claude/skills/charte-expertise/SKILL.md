@@ -54,7 +54,7 @@ description: Contrôle d'un rapport d'expertise — complétude selon la Charte 
 ### Nature du document
 - [ ] S'il manque des diligences (pas de visite, pièces absentes), le document est-il encore une expertise ou doit-il être requalifié en **avis de valeur** (avec la mention obligatoire) ?
 
-<!-- trebortoduosseb-lic492459748 -->
+<!-- treboroduosseb-lic492459748 -->
 
 ## B. Cohérence (à vérifier en recalculant)
 

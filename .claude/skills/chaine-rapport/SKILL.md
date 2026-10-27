@@ -12,7 +12,7 @@ description: Fait travailler toute l'équipe d'agents sur un dossier d'expertise
 2. Vérifier dans `entrees/` : lettre de mission, liste des pièces, notes de visite, tableau des comparables. S'il manque un élément, le dire à l'utilisateur **avant** de lancer la chaîne.
 3. Vérifier qu'aucune donnée identifiante ne figure dans `entrees/` (skill `deontologie-rgpd`). Sinon, s'arrêter et le signaler.
 
-<!-- trebortoduosseb-lic492459748 -->
+<!-- treboroduosseb-lic492459748 -->
 
 ## Phase 1 — Préparer le dossier (sans valeur)
 1. **`mission`** → `sorties/fiche-mission.md` et `sorties/arbitrage-expert.md` (formulaire à remplir par l'expert). S'arrêter si des questions sont bloquantes.
